@@ -1,0 +1,184 @@
+;Balrog truques - cheats
+;Como funciona :
+;Veja o valor da var (value) está em 0, basta mudar pra 1 e a manha vai funcionar.
+;Para desativar vc precisa colocar o value em 0 novamente. (ex: value = 0 ou value = 1)
+;Após mudar, somente salve este arquivo e pronto.
+;Se vc fizer cagada delete este arquivo e descompacte o arquivo original do zip novamente
+
+;How to do :
+;See the var value is 0, only change for 1 and the cheat will run.
+;To disable just type 0 in value again.
+;After change, save this file
+;If you make poo just delete this file and unzip again the original file
+
+;Podem ser habilitados ao mesmo tempo
+;Can be enabled at same time
+[StateDef -3]  
+
+
+;Invencibilidade / Invencibility-----------------------------
+[State -3, Invencibilidade] 
+type = Varset
+trigger1 = roundstate = 2
+v = 20
+value = 0      ;<- coloque 1 para habilitar / type 1 to enable
+
+;superforça / superstrong------------------------------------
+[State -3, forte] 
+type = Varset
+trigger1 = roundstate = 2
+v = 21
+value = 0      ;<- coloque 1 para habilitar / type 1 to enable
+
+;SuperDefeza / SuperDefence------------------------------------
+[State -3, defeza] 
+type = Varset
+trigger1 = roundstate = 2
+v = 22
+value = 0     ;<- coloque 1 para habilitar / type 1 to enable
+
+;Poder Maximo Level 3 / Maximum Power Level 3 -----------------
+[State -3, level3] 
+type = Varset
+trigger1 = roundstate = 2
+v = 23
+value = 0      ;<- coloque 1 para habilitar / type 1 to enable
+
+;Wolverine Fator Cura / Wolverine Health increase -------------
+[State -3, lifeup] 
+type = Varset
+trigger1 = roundstate = 2
+v = 24
+value = 0     ;<- coloque 1 para habilitar / type 1 to enable
+
+;Reptile mode / Ghost mode ----------------------------------
+[State -3, invisible] 
+type = Varset
+trigger1 = roundstate = 2
+v = 25
+value = 0     ;<- coloque 1 para habilitar / type 1 to enable
+
+;Atravessar o oponente / p2 thru ----------------------------------
+[State -3,raioX] 
+type = Varset
+trigger1 = roundstate = 2
+v = 26
+value = 0    ;<- coloque 1 para habilitar / type 1 to enable
+
+;Sombras / After images ------------------------------------------
+[State -3, shadows] 
+type = Varset
+trigger1 = roundstate = 2
+v = 27
+value = 0   ;<- coloque 1 para habilitar / type 1 to enable
+
+;Vira sozinho - No auto turn ------------------------------------
+[State -3, now] 
+type = Varset
+trigger1 = roundstate = 2
+v = 28
+value = 0     ;<- coloque 1 para habilitar / type 1 to enable
+
+;Modo Espírito (transparencia, atravessar) - Spirit Mode (transp. thru)--
+;Obs : Este aqui engloba ghostmode, sombras e atravessar p2---------------
+
+[State -3, transparente] 
+type = Varset
+trigger1 = roundstate = 2
+v = 29
+value = 0     ;<- coloque 1 para habilitar / type 1 to enable
+
+;Só estes por enquanto / only this for now
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;----------------------------------------------------------------------------
+;Aqui os esquemas são acionados, não altere nada! / Don't change nothing here!
+;-----------------------------------------------------------------------------
+[State -3, invenc] ; invenc.
+type = NotHitBy
+trigger1 = var(20) = 1
+value = SCA
+time = 1
+
+[State -3, 1] ;ataque
+type = AttackMulSet
+trigger1 = var(21) = 1
+value = 3
+
+[State -3, 1] ;Defeza
+type = DefenceMulSet
+trigger1 = var(22) = 1
+value = 0.5
+
+[State -3, 1] ;power
+type = powerset
+trigger1 = var(23) = 1
+trigger1 = power != 3000
+value = 3000
+
+[State -3, 1] ;vida
+type = lifeadd
+trigger1 = var(24) = 1 && (gametime%2)=0
+trigger1 = life != 1000
+value = 1
+
+[State -3, 1] ;ghost
+type = assertspecial
+trigger1 = var(25) = 1 && Stateno <= 4999
+trigger2 = var(25) = 1 && (gametime%3)=0 && stateno >= 5000
+trigger3 = var(29)=1
+flag = invisible
+
+[State -3, 1] ;raio-X
+type = playerpush
+trigger1 = var(26) = 1
+trigger2 = var(29)=1
+value = 0
+
+[State -3, 1] ;sombras
+type = AfterImage
+trigger1 = var(27) = 1 && (gametime%61)=0
+time = 60
+length = 10
+framegap = 1
+paladd = 50,50,50
+
+[State -3, 1] ;noautoturn
+type = assertspecial
+trigger1 = var(28) = 1
+flag = noautoturn
+
+[State -3, 1] ;turn
+type = turn
+triggerall = var(28) = 1
+trigger1 = anim = 21 && time = 1
+
+[State -3, 1] ;sprito
+type = AfterImage
+trigger1 = var(29) = 1 && (gametime%2)=0
+time = 3
+length = 2
+framegap = 1
+paladd = -50,-50,-50
+trans = add

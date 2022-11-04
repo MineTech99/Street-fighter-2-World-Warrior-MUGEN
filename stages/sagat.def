@@ -1,0 +1,137 @@
+; Stage information :
+; -----------------
+; From the game: 	Street Fighter II - World Warriors
+; Name:			Sagat's Stage (Thailand)
+; Version:		0.1
+
+; Original Information :	
+; Stage By:		Dark Saviour
+; From:			Win Kawaks 1.45
+; With:			MCM 1.5
+; Date:			03/12/2002
+; Email: 		darksaviour77@hotmail.com
+; Site:			http://www.ds-arena.fr.st
+
+; Super Jump Info :	
+; Additional Sprites:	Acey
+; Update Date:		05/11/2012
+; Email: 		admin@infinitymugenteam.com
+; Site:			http://www.infinitymugenteam.com
+
+;--------------------------------------------------------
+[Info]
+name = "(SF2) Sagat"
+
+;--------------------------------------------------------
+[Camera]
+startx = 0
+starty = 0
+boundleft = -120
+boundright = 120
+boundhigh = -200
+boundlow = -10
+verticalfollow = 0
+floortension = 0
+tension = 60
+zoomin=1
+zoomout=.7
+;--------------------------------------------------------
+[PlayerInfo]
+p1startx = -80
+p1starty = 0
+p1startz = 0
+p1facing = 1
+p2startx = 80
+p2starty = 0
+p2startz = 0
+p2facing = -1
+leftbound = -1000
+rightbound = 1000
+topbound = 0
+botbound = 0
+
+;--------------------------------------------------------
+[Scaling]
+topz = 0       
+botz = 50      
+topscale = 1       
+botscale = 1.2     
+
+;--------------------------------------------------------
+[Bound]
+screenleft = 40
+screenright = 40
+
+;--------------------------------------------------------
+[StageInfo]
+zoffset = 216
+autoturn = 1
+resetBG = 0
+
+;--------------------------------------------------------
+[Shadow]
+;color = 128, 128, 128
+yscale = .15
+reflect = 0
+
+;--------------------------------------------------------
+[Music]
+bgmusic = sound/sagat.mp3
+bgvolume = 255
+
+;--------------------------------------------------------
+[BGdef]
+spr = sagat.sff
+debugbg = 0
+
+;--------------------------------------------------------
+;--------------------------------------------------------
+
+[BG Background]
+type = normal 
+spriteno = 0, 0
+start = 0, 0
+delta = .671875, 1
+
+[BG Buddha]
+type = normal 
+spriteno = 1, 0
+start = 0, 0
+delta = .801339, 1
+mask = 1
+
+[BG Ground]
+type  = parallax
+spriteno = 2, 0
+start = 0, 192
+delta = .801339, 1
+xscale = 1, 1.484680
+
+[BG Rock1]
+type = normal
+spriteno = 3, 0
+start = -197, 219
+delta = 1.149274, 1
+mask = 1
+layerno = 1
+
+[BG Rock2]
+type = normal
+spriteno = 3, 0
+start = 133, 177
+delta = .801339, 1
+mask = 1
+
+[BG Tree]
+type = anim
+actionno = 0
+start = 69, 0
+delta = 1.189732, 1
+layerno = 1
+
+;_________________________________
+
+[Begin Action 0] ; Tree
+4,0, 0,0, 12
+4,1, 0,0, 24
+

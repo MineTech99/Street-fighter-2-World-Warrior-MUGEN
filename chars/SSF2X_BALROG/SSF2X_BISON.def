@@ -1,0 +1,57 @@
+;M.BISON/BALROG from Super Street Fighter II Turbo/X by OMEGAPSYCHO
+;Copyright CAPCOM. 2013
+; E-mail: OMEGAPSYCHO@hotmail.com
+;versión 1.0 (100%) 
+
+;------------------------------
+;[Player Information]
+;------------------------------
+[Info]
+Name         ="M.BISON"
+DisplayName  ="M.BISON"
+VersionDate  = 10,11,2013
+MugenVersion =1.1
+Author       ="OMEGAPSYCHO"
+Pal.Defaults = 4,5,6,1,2,3,7,8,9,10,11,12
+;------------------------------
+;[Common Files] 
+;------------------------------
+[Files]
+cmd	= CODE/commandBoxer.cmd	;Command set
+cns	= CODE/constantBoxer.cns	;Constants
+stcommon = CODE/commonBoxer2.cns	;Common states
+sprite	= CODE/BOXER.sff	;Sprite
+anim	= CODE/animationBoxer2.air	;Animation
+sound	= CODE/Boxer.snd    	;Sound
+
+;------------------------------
+;[States] 
+;------------------------------
+st	= CODE/commonBoxer2.cns	;Common
+st2     = CODE/statesBoxer2.cns	;States
+st3     = CODE/-2Boxer.cns
+st4     = CODE/MOVESBoxer.cns
+
+;------------------------------
+pal1 = act/BOXER_LK.act
+pal2 = act/BOXER_MK.act
+pal3 = act/BOXER_SK.act
+pal4 = act/BOXER_ORIGINAL.act ;<<<< BOXER_LP.act ;Original from SSFIIX/Turbo
+pal5 = act/BOXER_MP.act
+Pal6 = act/BOXER_SP.act
+Pal7 = act/BOXER_START.act
+Pal8 = act/BOXER_HOLD.act
+Pal9 = act/BOXER_ALTERNATE.act
+Pal10 = act/BOXER_EXTRA_1.act
+Pal11 = act/BOXER_EXTRA_2.act
+Pal12 = act/BOXER_EXTRA_3.act
+
+;Extra Colors
+;Pal* = act/BOXER_LP.act
+;Pal* = act/BOXER_EXTRA_4.act
+;Pal* = act/BOXER_EXTRA_5.act
+
+;----------------------------
+[Arcade]
+intro.storyboard  =
+ending.storyboard =ending.def

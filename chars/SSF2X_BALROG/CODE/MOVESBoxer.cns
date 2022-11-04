@@ -1,0 +1,5232 @@
+
+;-------------------------------------------------------------------
+;SLP
+[StateDef 200]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 200
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 200]
+Type = Turn
+Trigger1 = P2Dist X < 0 && Time = 0
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 0
+Volumescale = 100
+
+[State 200]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = S, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 25
+GetPower = 120
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S50+TeamSide
+Guard.SparkNo = S50
+SparkXY = -60+Floor(P2Dist X)/2, -80
+HitSound = S1, 0
+GuardSound = S3, 0
+AnimType = Light
+Air.AnimType = Back
+Ground.Type = Low
+Ground.SlideTime = 11
+Ground.HitTime = 12
+Guard.HitTime = 19
+Air.HitTime = 12
+Ground.Velocity = -6*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -4
+Ground.CornerPush.VelOff = -9*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+
+[State 200]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 0
+Ctrl = 1
+
+;---------------------------------------------------------------------------
+;SMP
+[StateDef 210]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 210
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 210]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 1
+Volumescale = 100
+
+[State 210]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = S, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 120
+GetPower = 200
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S52+TeamSide
+Guard.SparkNo = S50
+SparkXY = -75+Floor(P2Dist X)/2, -90
+HitSound = S1, 1
+GuardSound = S3, 0
+AnimType = Middle
+Air.AnimType = Back
+Ground.Type = High
+Ground.SlideTime = 17
+Ground.HitTime = 16
+Guard.HitTime = 24
+Air.HitTime = 99
+Ground.Velocity = -7*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -4
+Ground.CornerPush.VelOff = -14*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+
+[State 210]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 0
+Ctrl = 1
+
+;---------------------------------------------------------------------------
+;SMP-N
+[StateDef 211]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 211
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 210]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 1
+Volumescale = 100
+
+[State 210]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = S, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 120
+GetPower = 200
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S52+TeamSide
+Guard.SparkNo = S50
+SparkXY = -50+Floor(P2Dist X)/2, -90
+HitSound = S1, 1
+GuardSound = S3, 0
+AnimType = Middle
+Air.AnimType = Back
+Ground.Type = Low
+Ground.SlideTime = 17
+Ground.HitTime = 16
+Guard.HitTime = 24
+Air.HitTime = 99
+Ground.Velocity = -7*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -4
+Ground.CornerPush.VelOff = -14*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+
+[State 210]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 0
+Ctrl = 1
+
+;---------------------------------------------------------------------------
+;SSP
+[StateDef 220]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 220
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 220]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 2
+Volumescale = 100
+
+[State 220]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = S, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 160
+GetPower = 250
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -92+Floor(P2Dist X)/2, -70
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Hard
+Air.AnimType = Back
+Ground.Type = Low
+Ground.SlideTime = 21
+Ground.HitTime = 20
+Guard.HitTime = 29
+Air.HitTime = 99
+Ground.Velocity = -9*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -4
+Ground.CornerPush.VelOff = -18*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+
+[State 220]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 0
+Ctrl = 1
+;---------------------------------------------------------------------------
+;SSP-N
+[StateDef 221]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 221
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 220]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 2
+Volumescale = 100
+
+[State 220]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !Time
+Attr = S, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 160
+GetPower = 250
+GivePower = 0
+PauseTime = 12, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -60+Floor(P2Dist X)/2, -80
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Hard
+Air.AnimType = Back
+Ground.Type = High
+Ground.SlideTime = 21
+Ground.HitTime = 20
+Guard.HitTime = 29
+Air.HitTime = 99
+Ground.Velocity = -9*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -4
+Ground.CornerPush.VelOff = -18*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+
+[State 220]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 0
+Ctrl = 1
+
+;---------------------------------------------------------------------------
+;SLK
+[StateDef 230]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 230
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 200]
+Type = Turn
+Trigger1 = P2Dist X < 0 && Time = 0
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 0
+Volumescale = 100
+
+[State 200]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = S, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 25
+GetPower = 100
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S50+TeamSide
+Guard.SparkNo = S50
+SparkXY = -64+Floor(P2Dist X)/2, -80
+HitSound = S2, 0
+GuardSound = S3, 0
+AnimType = Light
+Air.AnimType = Back
+Ground.Type = High
+Ground.SlideTime = 11
+Ground.HitTime = 12
+Guard.HitTime = 19
+Air.HitTime = 99
+Ground.Velocity = -5*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -4
+Ground.CornerPush.VelOff = -8*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+
+[State 200]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 0
+Ctrl = 1
+
+;---------------------------------------------------------------------------
+;SMK
+[StateDef 240]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 240
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 210]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 1
+Volumescale = 100
+
+[State 210]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !Time
+Attr = S, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 135
+GetPower = 200
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S52+TeamSide
+Guard.SparkNo = S50
+SparkXY = -70+Floor(P2Dist X)/2, -52
+HitSound = S2, 1
+GuardSound = S3, 0
+AnimType = Middle
+Air.AnimType = Back
+Ground.Type = Low
+Ground.SlideTime = 17
+Ground.HitTime = 16
+Guard.HitTime = 24
+Air.HitTime = 99
+Ground.Velocity = -7*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -4
+Ground.CornerPush.VelOff = -14*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+
+[State 210]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 0
+Ctrl = 1
+
+;---------------------------------------------------------------------------
+;SMK-N
+[StateDef 241]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 241
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 210]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 1
+Volumescale = 100
+
+[State 210]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = S, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 135
+GetPower = 200
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S52+TeamSide
+Guard.SparkNo = S50
+SparkXY = -50+Floor(P2Dist X)/2, -52
+HitSound = S2, 1
+GuardSound = S3, 0
+AnimType = Middle
+Air.AnimType = Back
+Ground.Type = Low
+Ground.SlideTime = 17
+Ground.HitTime = 16
+Guard.HitTime = 24
+Air.HitTime = 99
+Ground.Velocity = -7*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -4
+Ground.CornerPush.VelOff = -14*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+
+[State 210]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 0
+Ctrl = 1
+
+;---------------------------------------------------------------------------
+;SSK
+[StateDef 250]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 250
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 220]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 2
+Volumescale = 100
+
+[State 220]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = S, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 170
+GetPower = 240
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -70+Floor(P2Dist X)/2, -88
+HitSound = S2, 2
+GuardSound = S3, 0
+AnimType = Hard
+Air.AnimType = Back
+Ground.Type = Low
+Ground.SlideTime = 21
+Ground.HitTime = 20
+Guard.HitTime = 29
+Air.HitTime = 99
+Ground.Velocity = -9*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -4
+Ground.CornerPush.VelOff = -18*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+
+[State 220]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 0
+Ctrl = 1
+;---------------------------------------------------------------------------
+;SSK-N
+[StateDef 251]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 251
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 220]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 2
+Volumescale = 100
+
+[State 220]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = S, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 170
+GetPower = 250
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -50+Floor(P2Dist X)/2, -52
+HitSound = S2, 2
+GuardSound = S3, 0
+AnimType = Hard
+Air.AnimType = Back
+Ground.Type = Low
+Ground.SlideTime = 21
+Ground.HitTime = 20
+Guard.HitTime = 29
+Air.HitTime = 99
+Ground.Velocity = -9*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -4
+Ground.CornerPush.VelOff = -18*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+
+[State 220]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 0
+Ctrl = 1
+
+;---------------------------------------------------------------------------
+;CLP
+[StateDef 300]
+Type = C
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 300
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 300]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 0
+Volumescale = 100
+
+[State 300]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = C, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 24
+GetPower = 100
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S50+TeamSide
+Guard.SparkNo = S50
+SparkXY = -60+Floor(P2Dist X)/2, -45
+HitSound = S1, 0
+GuardSound = S3, 0
+AnimType = Light
+Air.AnimType = Back
+Ground.Type = Low
+Ground.SlideTime = 11
+Ground.HitTime = 12
+Guard.HitTime = 19
+Air.HitTime = 99
+Ground.Velocity = -4*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -4
+Ground.CornerPush.VelOff = -6*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+
+[State 300]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 11
+Ctrl = 1
+;---------------------------------------------------------------------------
+;CMP
+[StateDef 310]
+Type = C
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 310
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 210]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 1
+Volumescale = 100
+
+[State 310]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = C, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 120
+GetPower = 200
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S52+TeamSide
+Guard.SparkNo = S50
+SparkXY = -65+Floor(P2Dist X)/2, -55
+HitSound = S1, 1
+GuardSound = S3, 0
+AnimType = Middle
+Air.AnimType = Back
+Ground.Type = Low
+Ground.SlideTime = 17
+Ground.HitTime = 16
+Guard.HitTime = 24
+Air.HitTime = 99
+Ground.Velocity = -7*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -4
+Ground.CornerPush.VelOff = -14*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+
+[State 210]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 11
+Ctrl = 1
+
+;---------------------------------------------------------------------------
+;CSP
+[StateDef 320]
+Type = C
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 320
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 220]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 2
+Volumescale = 100
+
+[State 320]
+Type = HitDef
+triggerall = (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !Time
+Attr = C, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 160
+GetPower = 240
+GivePower = 0
+PauseTime = 12, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY =  -70+Floor(P2Dist X)/2, -70
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Hard
+Air.AnimType = Back
+Ground.Type = High
+Ground.SlideTime = 21
+Ground.HitTime = 20
+Guard.HitTime = 29
+Air.HitTime = 99
+Ground.Velocity = -9*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -4
+Ground.CornerPush.VelOff = -18*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+
+[State 220]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 11
+Ctrl = 1
+
+;---------------------------------------------------------------------------
+;CLK
+[StateDef 330]
+Type = C
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 330
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 300]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 0
+Volumescale = 100
+
+[State 300]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = C, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 26
+GetPower = 100
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S50+TeamSide
+Guard.SparkNo = S50
+SparkXY = -65+Floor(P2Dist X)/2, -45
+HitSound = S2, 0
+GuardSound = S3, 0
+AnimType = Light
+Air.AnimType = Back
+Ground.Type = Low
+Ground.SlideTime = 11
+Ground.HitTime = 12
+Guard.HitTime = 19
+Air.HitTime = 99
+Ground.Velocity = -5*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -4
+Ground.CornerPush.VelOff = -8*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+
+[State 300]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 11
+Ctrl = 1
+;---------------------------------------------------------------------------
+;CMK
+[StateDef 340]
+Type = C
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 340
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 210]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 1
+Volumescale = 100
+
+[State 310]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = C, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 130
+GetPower = 200
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S52+TeamSide
+Guard.SparkNo = S50
+SparkXY = -65+Floor(P2Dist X)/2, -21
+HitSound = S2, 1
+GuardSound = S3, 0
+AnimType = Middle
+Air.AnimType = Back
+Ground.Type = Low
+Ground.SlideTime = 17
+Ground.HitTime = 16
+Guard.HitTime = 24
+Air.HitTime = 99
+Ground.Velocity = -7*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -4
+Ground.CornerPush.VelOff = -14*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+
+[State 210]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 11
+Ctrl = 1
+
+;---------------------------------------------------------------------------
+;CSK
+[StateDef 350]
+Type = C
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 350
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 220]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 2
+Volumescale = 100
+
+[State 350]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = C, NA
+HitFlag = MA
+GuardFlag = L
+Damage = 165
+GetPower = 250
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -71+Floor(P2Dist X)/2, -35
+HitSound = S2, 2
+GuardSound = S3, 0
+AnimType = Hard
+Ground.Type = Trip
+Ground.SlideTime = 21
+Ground.HitTime = 20
+Guard.HitTime = 29
+Ground.Velocity = -2*Const(Size.XScale), -5
+Guard.Velocity = -9*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -5
+Ground.CornerPush.VelOff = -18*Const(Size.XScale)
+Fall = 1
+Fall.Recover = 0
+Fall.YVelocity = 0
+YAccel = .25
+P2Facing = 1
+
+[State 220]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 11
+Ctrl = 1
+
+;---------------------------------------------------------------------------
+;JLP
+[StateDef 400]
+Type = A
+MoveType = A
+Physics = A
+Ctrl = 0
+Anim = ifelse(vel x=0,400,401)
+
+[State 400]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 0
+volumescale = 100
+
+[State 400]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = A, NA
+HitFlag = MA
+GuardFlag = H
+Damage = 83
+GetPower = 100
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S50+TeamSide
+Guard.SparkNo = S50
+SparkXY = -65+Floor(P2Dist X)/2, -40
+HitSound = S1, 0
+GuardSound = S3, 0
+Animtype = Light
+Air.AnimType = Back
+Ground.Type = Low
+Ground.SlideTime = 11
+Ground.HitTime = 12
+Guard.HitTime = 19
+Air.HitTime = 99
+Ground.Velocity = -5*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -4
+Ground.CornerPush.VelOff = -8*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+
+[State 206, ChangeState]
+type = ChangeState
+trigger1 = Pos Y >= 0 && Vel Y > 0
+value = 52
+
+;---------------------------------------------------------------------------
+;JMP
+[Statedef 410]
+Type = A
+MoveType = A
+Physics = A
+Ctrl = 0
+Anim = ifelse(vel x=0,410,411)
+
+[State 410]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 1
+volumescale = 100
+
+[State 410]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = A, NA
+HitFlag = MA
+GuardFlag = H
+Damage = 111
+GetPower = 170
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S52+TeamSide
+Guard.SparkNo = S50
+SparkXY = -65+Floor(P2Dist X)/2, -60
+HitSound = S1, 1
+GuardSound = S3, 0
+Animtype = Light
+Air.AnimType = Back
+Ground.Type = Low
+Ground.SlideTime = 11
+Ground.HitTime = 12
+Guard.HitTime = 19
+Air.HitTime = 99
+Ground.Velocity = -5*Const(Size.XScale)
+Ground.CornerPush.VelOff = -10*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -4
+YAccel = .25
+P2Facing = 1
+
+[State 206, ChangeState]
+type = ChangeState
+trigger1 = Pos Y >= 0 && Vel Y > 0
+value = 52
+
+
+;---------------------------------------------------------------------------
+;JSP
+[StateDef 420]
+Type = A
+MoveType = A
+Physics = A
+Ctrl = 0
+Anim = ifelse(vel x=0,420,421)
+
+[State 420]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 2
+volumescale = 100
+
+[State 420]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = A, NA
+HitFlag = MA
+GuardFlag = H
+Damage = 140
+GetPower = 220
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -68+Floor(P2Dist X)/2, -52
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Light
+Air.AnimType = Back
+Ground.Type = Low
+Ground.SlideTime = 11
+Ground.HitTime = 12
+Guard.HitTime = 19
+Air.HitTime = 99
+Ground.Velocity = -5*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -4
+Ground.CornerPush.VelOff = -10*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+
+[State 206, ChangeState]
+type = ChangeState
+trigger1 = Pos Y >= 0 && Vel Y > 0
+value = 52
+
+;---------------------------------------------------------------------------
+;JLK
+[StateDef 430]
+Type = A
+MoveType = A
+Physics = A
+Ctrl = 0
+Anim = 430
+
+[State 400]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 0
+volumescale = 100
+
+[State 400]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = A, NA
+HitFlag = MA
+GuardFlag = H
+Damage = 83
+GetPower = 120
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S50+TeamSide
+Guard.SparkNo = S50
+SparkXY = -60+Floor(P2Dist X)/2, -40
+HitSound = S2, 0
+GuardSound = S3, 0
+Animtype = Light
+Air.AnimType = Back
+Ground.Type = Low
+Ground.SlideTime = 11
+Ground.HitTime = 12
+Guard.HitTime = 19
+Air.HitTime = 99
+Ground.Velocity = -5*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -4
+Ground.CornerPush.VelOff = -8*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+
+[State 206, ChangeState]
+type = ChangeState
+trigger1 = Pos Y >= 0 && Vel Y > 0
+value = 52
+
+;---------------------------------------------------------------------------
+;JMK
+[Statedef 440]
+Type = A
+MoveType = A
+Physics = A
+Ctrl = 0
+Anim = 440
+
+[State 410]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 1
+volumescale = 100
+
+[State 410]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = A, NA
+HitFlag = MA
+GuardFlag = H
+Damage = 114
+GetPower = 160
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S52+TeamSide
+Guard.SparkNo = S50
+SparkXY = -60+Floor(P2Dist X)/2, -40
+HitSound = S2, 1
+GuardSound = S3, 0
+Animtype = Light
+Air.AnimType = Back
+Ground.Type = Low
+Ground.SlideTime = 11
+Ground.HitTime = 12
+Guard.HitTime = 19
+Air.HitTime = 99
+Ground.Velocity = -5*Const(Size.XScale)
+Ground.CornerPush.VelOff = -10*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -4
+YAccel = .25
+P2Facing = 1
+
+[State 206, ChangeState]
+type = ChangeState
+trigger1 = Pos Y >= 0 && Vel Y > 0
+value = 52
+
+;---------------------------------------------------------------------------
+;JSK
+[StateDef 450]
+Type = A
+MoveType = A
+Physics = A
+Ctrl = 0
+Anim = ifelse(vel x=0,450,451)
+
+[State 420]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 2
+volumescale = 100
+
+[State 420]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = A, NA
+HitFlag = MA
+GuardFlag = H
+Damage = 160
+GetPower = 220
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -47+Floor(P2Dist X)/2, -26
+HitSound = S2, 2
+GuardSound = S3, 0
+AnimType = Light
+Air.AnimType = Back
+Ground.Type = Low
+Ground.SlideTime = 11
+Ground.HitTime = 12
+Guard.HitTime = 19
+Air.HitTime = 99
+Ground.Velocity = -5*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -4
+Ground.CornerPush.VelOff = -10*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+
+[State 206, ChangeState]
+type = ChangeState
+trigger1 = Pos Y >= 0 && Vel Y > 0
+value = 52
+
+[State 206, ChangeState]
+type = ChangeState
+trigger1 = Pos Y >= 0 && Vel Y > 0
+value = 52
+
+;---------------------------------------------------------------------------
+;---------------------------------------------------------------------------
+;---------------------------------------------------------------------------
+;---------------------------------------------------------------------------
+;---------------------------------------------------------------------------
+;---------------------------------------------------------------------------
+;---------------------------------------------------------------------------
+;---------------------------------------------------------------------------
+;---------------------------------------------------------------------------
+;---------------------------------------------------------------------------
+;---------------------------------------------------------------------------
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------
+
+;-------------------------------------------------------------------
+;Straight Rush Light
+[StateDef 1000]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1000
+VelSet = 0
+SprPriority = 2
+
+[State 0, super]
+type = Poweradd
+Trigger1 = time = 0
+value = 400
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 2
+Volumescale = 100
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 1
+Value = S100, 0
+Volumescale = 100
+
+[State 0, stop]
+type = Velset
+Trigger1 = 1
+x = 7
+y = 0
+
+[State 200]
+Type = ChangeState
+Triggerall = Time >2
+Trigger1 = P2Bodydist X<65
+Trigger2 = Time >8
+Value = 1001
+
+;-------------------------------------------------------------------
+;Straight Rush Light
+[StateDef 1001]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1001
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+x = 7
+y = 0
+
+[State 0, stop]
+type = Veladd
+Trigger1 = vel x >0
+Trigger1 = time>0
+x = -0.55
+
+[State 0, stop]
+type = Velset
+Trigger1 = time >0
+Trigger1 = vel x <= 0
+Trigger2 = animelem = 4
+x = 0
+y = 0
+
+[State 220]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = S, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 160,25
+GetPower = 0
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -92+Floor(P2Dist X)/2, -70
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Hard
+Air.AnimType = Back
+Ground.Type = High
+Ground.SlideTime = 21
+Ground.HitTime = 20
+Guard.HitTime = 29
+Air.HitTime = 99
+Ground.Velocity = -11*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -6
+Ground.CornerPush.VelOff = -16*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+fall = 0
+air.fall = 1
+fall.recover = 0
+
+[State 200]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 0
+ctrl = 1
+
+;-------------------------------------------------------------------
+;Straight Rush Medium
+[StateDef 1002]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1000
+VelSet = 0
+SprPriority = 2
+
+[State 0, super]
+type = Poweradd
+Trigger1 = time = 0
+value = 410
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 2
+Volumescale = 100
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 1
+Value = S100, 0
+Volumescale = 100
+
+[State 0, stop]
+type = Velset
+Trigger1 = 1
+x = 8
+y = 0
+
+[State 200]
+Type = ChangeState
+Triggerall = Time >2
+Trigger1 = P2Bodydist X<65
+Trigger2 = Time >16
+Value = 1003
+
+;-------------------------------------------------------------------
+;Straight Rush Medium
+[StateDef 1003]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1001
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+x = 8
+y = 0
+
+[State 0, stop]
+type = Veladd
+Trigger1 = vel x >0
+Trigger1 = time>0
+x = -0.8
+
+[State 0, stop]
+type = Velset
+Trigger1 = time >0
+Trigger1 = vel x <= 0
+Trigger2 = animelem = 4
+x = 0
+y = 0
+
+[State 220]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = S, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 170,35
+GetPower = 0
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -92+Floor(P2Dist X)/2, -70
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Hard
+Air.AnimType = Back
+Ground.Type = High
+Ground.SlideTime = 21
+Ground.HitTime = 20
+Guard.HitTime = 29
+Air.HitTime = 99
+Ground.Velocity = -11*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -6.1
+Ground.CornerPush.VelOff = -17*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+fall = 0
+air.fall = 1
+fall.recover = 0
+
+[State 200]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 0
+ctrl = 1
+
+;-------------------------------------------------------------------
+;Straight Rush Strong
+[StateDef 1004]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1000
+VelSet = 0
+SprPriority = 2
+
+[State 0, super]
+type = Poweradd
+Trigger1 = time = 0
+value = 420
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 2
+Volumescale = 100
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 1
+Value = S100, 0
+Volumescale = 100
+
+[State 0, stop]
+type = Velset
+Trigger1 = 1
+x = 8
+y = 0
+
+[State 200]
+Type = ChangeState
+Triggerall = Time >2
+Trigger1 = P2Bodydist X<65
+Trigger2 = Time >25
+Value = 1005
+
+;-------------------------------------------------------------------
+;Straight Rush Strong
+[StateDef 1005]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1002
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+x = 8
+y = 0
+
+[State 0, stop]
+type = Veladd
+Trigger1 = vel x >0
+Trigger1 = time>0
+x = -0.8
+
+[State 0, stop]
+type = Velset
+Trigger1 = time >0
+Trigger1 = vel x <= 0
+Trigger2 = animelem = 4
+x = 0
+y = 0
+
+[State 220]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !Time
+Attr = SCA, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 180,45
+GetPower = 0
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -90+Floor(P2Dist X)/2, -60 - (AnimElem=4,>0)*20 - (AnimElem=5,>0)*10
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Hard
+Ground.Type = Low
+Ground.SlideTime = 22
+Ground.HitTime = 22
+Guard.HitTime = 22
+Air.HitTime = 99
+Ground.Velocity = -2.2*Const(Size.XScale), -6.1
+Guard.Velocity = -9*Const(Size.XScale)
+Air.Velocity = -2.2*Const(Size.XScale), -6.1
+Ground.CornerPush.VelOff = -16*Const(Size.XScale)
+Fall = 1
+Fall.Recover = 0
+YAccel = .3
+P2Facing = 1
+air.fall = 1
+
+[State 200]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 0
+ctrl = 1
+
+;-------------------------------------------------------------------
+;Ground Straight Rush Light
+[StateDef 1006]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1000
+VelSet = 0
+SprPriority = 2
+
+[State 0, super]
+type = Poweradd
+Trigger1 = time = 0
+value = 400
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 2
+Volumescale = 100
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 1
+Value = S100, 0
+Volumescale = 100
+
+[State 0, stop]
+type = Velset
+Trigger1 = 1
+x = 7
+y = 0
+
+[State 200]
+Type = ChangeState
+Triggerall = Time >2
+Trigger1 = P2Bodydist X<65
+Trigger2 = Time >4
+Value = 1007
+
+;-------------------------------------------------------------------
+;Ground Straight Rush Light
+[StateDef 1007]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1007
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+x = 7
+y = 0
+
+[State 0, stop]
+type = Veladd
+Trigger1 = vel x >0
+Trigger1 = time>0
+x = -0.55
+
+[State 0, stop]
+type = Velset
+Trigger1 = time >0
+Trigger1 = vel x <= 0
+Trigger2 = animelem = 5
+x = 0
+y = 0
+
+[State 350]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = C, NA
+HitFlag = MA
+GuardFlag = L
+Damage = 160,25
+GetPower = 0
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -71+Floor(P2Dist X)/2, -35
+HitSound = S2, 2
+GuardSound = S3, 0
+AnimType = Hard
+Ground.Type = Trip
+Ground.SlideTime = 21
+Ground.HitTime = 20
+Guard.HitTime = 29
+Ground.Velocity = -2*Const(Size.XScale), -5
+Guard.Velocity = -9*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -5
+Ground.CornerPush.VelOff = -16*Const(Size.XScale)
+Fall = 1
+Fall.Recover = 0
+Fall.YVelocity = 0
+YAccel = .25
+P2Facing = 1
+
+[State 200]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 11
+ctrl = 1
+
+
+;-------------------------------------------------------------------
+;Ground Straight Rush Medium
+[StateDef 1008]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1000
+VelSet = 0
+SprPriority = 2
+
+[State 0, super]
+type = Poweradd
+Trigger1 = time = 0
+value = 410
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 2
+Volumescale = 100
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 1
+Value = S100, 0
+Volumescale = 100
+
+[State 0, stop]
+type = Velset
+Trigger1 = 1
+x = 8
+y = 0
+
+[State 200]
+Type = ChangeState
+Triggerall = Time >2
+Trigger1 = P2Bodydist X<65
+Trigger2 = Time >8
+Value = 1009
+
+;-------------------------------------------------------------------
+;Ground Straight Rush Medium
+[StateDef 1009]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1009
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+x = 8
+y = 0
+
+[State 0, stop]
+type = Veladd
+Trigger1 = vel x >0
+Trigger1 = time>0
+x = -0.7
+
+[State 0, stop]
+type = Velset
+Trigger1 = time >0
+Trigger1 = vel x <= 0
+Trigger2 = animelem = 5
+x = 0
+y = 0
+
+
+[State 350]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = C, NA
+HitFlag = MA
+GuardFlag = L
+Damage = 170,35
+GetPower = 0
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -71+Floor(P2Dist X)/2, -35
+HitSound = S2, 2
+GuardSound = S3, 0
+AnimType = Hard
+Ground.Type = Trip
+Ground.SlideTime = 21
+Ground.HitTime = 20
+Guard.HitTime = 29
+Ground.Velocity = -2*Const(Size.XScale), -5
+Guard.Velocity = -9*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -5
+Ground.CornerPush.VelOff = -17*Const(Size.XScale)
+Fall = 1
+Fall.Recover = 0
+Fall.YVelocity = 0
+YAccel = .25
+P2Facing = 1
+
+[State 200]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 11
+ctrl = 1
+
+
+;-------------------------------------------------------------------
+;Ground Straight Rush Strong
+[StateDef 1010]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1000
+VelSet = 0
+SprPriority = 2
+
+[State 0, super]
+type = Poweradd
+Trigger1 = time = 0
+value = 420
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 2
+Volumescale = 100
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 1
+Value = S100, 0
+Volumescale = 100
+
+[State 0, stop]
+type = Velset
+Trigger1 = 1
+x = 8
+y = 0
+
+[State 200]
+Type = ChangeState
+Triggerall = Time >2
+Trigger1 = P2Bodydist X<65
+Trigger2 = Time >12
+Value = 1011
+
+;-------------------------------------------------------------------
+;Ground Straight Rush Strong
+[StateDef 1011]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1011
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+x = 8
+y = 0
+
+[State 0, stop]
+type = Veladd
+Trigger1 = vel x >0
+Trigger1 = time>0
+x = -0.7
+
+[State 0, stop]
+type = Velset
+Trigger1 = time >0
+Trigger1 = vel x <= 0
+Trigger2 = animelem = 5
+x = 0
+y = 0
+
+[State 350]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = C, NA
+HitFlag = MA
+GuardFlag = L
+Damage = 180,45
+GetPower = 0
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -71+Floor(P2Dist X)/2, -35
+HitSound = S2, 2
+GuardSound = S3, 0
+AnimType = Hard
+Ground.Type = Trip
+Ground.SlideTime = 21
+Ground.HitTime = 20
+Guard.HitTime = 29
+Ground.Velocity = -2*Const(Size.XScale), -5
+Guard.Velocity = -9*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -5
+Ground.CornerPush.VelOff = -18*Const(Size.XScale)
+Fall = 1
+Fall.Recover = 0
+Fall.YVelocity = 0
+YAccel = .25
+P2Facing = 1
+
+[State 200]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 11
+ctrl = 1
+
+;-------------------------------------------------------------------
+;Upper Rush Light
+[StateDef 1012]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1012
+VelSet = 0
+SprPriority = 2
+
+[State 0, super]
+type = Poweradd
+Trigger1 = time = 0
+value = 400
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 2
+Volumescale = 100
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 1
+Value = S100, 0
+Volumescale = 100
+
+[State 0, stop]
+type = Velset
+Trigger1 = 1
+x = 7
+y = 0
+
+[State 200]
+Type = ChangeState
+Triggerall = Time >4
+Trigger1 = P2Bodydist X<65
+Trigger2 = Time >9
+Value = 1013
+
+;-------------------------------------------------------------------
+;Upper Rush Light
+[StateDef 1013]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1013
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+x = 7
+y = 0
+
+[State 0, stop]
+type = Veladd
+Trigger1 = vel x >0
+Trigger1 = time>0
+x = -0.55
+
+[State 0, stop]
+type = Velset
+Trigger1 = time >0
+Trigger1 = vel x <= 0
+Trigger2 = animelem = 5
+x = 0
+y = 0
+
+[State 220]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = S, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 160,25
+GetPower = 0
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -66+Floor(P2Dist X)/2, -100
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Hard
+Air.AnimType = Back
+Ground.Type = High
+Ground.SlideTime = 21
+Ground.HitTime = 20
+Guard.HitTime = 29
+Air.HitTime = 99
+Ground.Velocity = -11*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -6.2
+Ground.CornerPush.VelOff = -18*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+fall = 0
+air.fall = 1
+fall.recover = 0
+
+[State 200]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 0
+ctrl = 1
+
+;-------------------------------------------------------------------
+;UpperRush Medium
+[StateDef 1014]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1012
+VelSet = 0
+SprPriority = 2
+
+[State 0, super]
+type = Poweradd
+Trigger1 = time = 0
+value = 410
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 2
+Volumescale = 100
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 1
+Value = S100, 0
+Volumescale = 100
+
+[State 0, stop]
+type = Velset
+Trigger1 = 1
+x = 8
+y = 0
+
+[State 200]
+Type = ChangeState
+Triggerall = Time >4
+Trigger1 = P2Bodydist X<65
+Trigger2 = Time >17
+Value = 1015
+
+;-------------------------------------------------------------------
+;UpperRush Medium
+[StateDef 1015]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1013
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+x = 8
+y = 0
+
+[State 0, stop]
+type = Veladd
+Trigger1 = vel x >0
+Trigger1 = time>0
+x = -0.8
+
+[State 0, stop]
+type = Velset
+Trigger1 = time >0
+Trigger1 = vel x <= 0
+Trigger2 = animelem = 5
+x = 0
+y = 0
+
+
+[State 220]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = S, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 170,35
+GetPower = 0
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -66+Floor(P2Dist X)/2, -100
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Hard
+Air.AnimType = Back
+Ground.Type = High
+Ground.SlideTime = 21
+Ground.HitTime = 20
+Guard.HitTime = 29
+Air.HitTime = 99
+Ground.Velocity = -11*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -6.2
+Ground.CornerPush.VelOff = -18*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+fall = 0
+air.fall = 1
+fall.recover = 0
+
+[State 200]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 0
+ctrl = 1
+
+;-------------------------------------------------------------------
+;UpperRush Strong
+[StateDef 1016]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1012
+VelSet = 0
+SprPriority = 2
+
+[State 0, super]
+type = Poweradd
+Trigger1 = time = 0
+value = 420
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 2
+Volumescale = 100
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 1
+Value = S100, 0
+Volumescale = 100
+
+[State 0, stop]
+type = Velset
+Trigger1 = 1
+x = 8
+y = 0
+
+[State 200]
+Type = ChangeState
+Triggerall = Time >4
+Trigger1 = P2Bodydist X<65
+Trigger2 = Time >25
+Value = 1017
+
+;-------------------------------------------------------------------
+;UpperRush Strong
+[StateDef 1017]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1013
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+x = 8
+y = 0
+
+[State 0, stop]
+type = Veladd
+Trigger1 = vel x >0
+Trigger1 = time>0
+x = -0.8
+
+[State 0, stop]
+type = Velset
+Trigger1 = time >0
+Trigger1 = vel x <= 0
+Trigger2 = animelem = 5
+x = 0
+y = 0
+
+[State 220]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = S, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 180,45
+GetPower = 0
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -66+Floor(P2Dist X)/2, -100
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Hard
+Air.AnimType = Back
+Ground.Type = High
+Ground.SlideTime = 21
+Ground.HitTime = 20
+Guard.HitTime = 29
+Air.HitTime = 99
+Ground.Velocity = -11*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -6.2
+Ground.CornerPush.VelOff = -18*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+fall = 0
+air.fall = 1
+fall.recover = 0
+
+[State 200]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 0
+ctrl = 1
+
+;-------------------------------------------------------------------
+;Ground Upper Rush Light #1
+[StateDef 1018]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1020
+VelSet = 0
+SprPriority = 2
+
+[State 0, super]
+type = Poweradd
+Trigger1 = time = 0
+value = 400
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 2
+Volumescale = 100
+
+[State 0, stop]
+type = Velset
+Trigger1 = 1
+x = 7
+y = 0
+
+[State 200]
+Type = ChangeState
+Triggerall = Time >1
+Trigger1 = P2Bodydist X<65
+Trigger2 = Time >3
+Value = 1019
+;-------------------------------------------------------------------
+;Ground Upper Rush Light #2
+[StateDef 1019]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1021
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = Velset
+Trigger1 = 1
+x = 7
+y = 0
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S100, 0
+Volumescale = 100
+
+[State 200]
+Type = ChangeState
+Trigger1= Time >1
+Value = 1020
+;-------------------------------------------------------------------
+;Ground Upper Rush Light #3
+[StateDef 1020]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1022
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = Velset
+Trigger1 = 1
+x = 7
+y = 0
+
+[State 200]
+Type = ChangeState
+Trigger1= Time >4
+Value = 1021
+
+;-------------------------------------------------------------------
+;Ground Upper Rush Light Attack
+[StateDef 1021]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1023
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+x = 7
+y = 0
+
+[State 0, stop]
+type = Veladd
+Trigger1 = vel x >0
+Trigger1 = time>0
+x = -0.55
+
+[State 0, stop]
+type = Velset
+Trigger1 = time >0
+Trigger1 = vel x <= 0
+Trigger2 = animelem = 5
+x = 0
+y = 0
+
+[State 220]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !Time
+Attr = SCA, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 160,25
+GetPower = 0
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -66+Floor(P2Dist X)/2, -100 - (AnimElem=4,>0)*20 - (AnimElem=5,>0)*10
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Up
+Ground.Type = Low
+Ground.SlideTime = 22
+Ground.HitTime = 22
+Guard.HitTime = 22
+Air.HitTime = 99
+Ground.Velocity = -2*Const(Size.XScale), -6
+Guard.Velocity = -9*Const(Size.XScale)
+Air.Velocity = -3*Const(Size.XScale), -6
+Ground.CornerPush.VelOff = -10*Const(Size.XScale)
+Fall = 1
+Fall.Recover = 0
+YAccel = .3
+P2Facing = 1
+air.fall = 1
+
+[State 200]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 11
+ctrl = 1
+
+;-------------------------------------------------------------------
+;Ground Upper Rush Medium #1
+[StateDef 1022]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1020
+VelSet = 0
+SprPriority = 2
+
+[State 0, super]
+type = Poweradd
+Trigger1 = time = 0
+value = 410
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 2
+Volumescale = 100
+
+[State 0, stop]
+type = Velset
+Trigger1 = 1
+x = 8
+y = 0
+
+[State 200]
+Type = ChangeState
+Triggerall = Time >1
+Trigger1 = P2Bodydist X<65
+Trigger2 = Time >3
+Value = 1023
+;-------------------------------------------------------------------
+;Ground Upper Rush Medium #2
+[StateDef 1023]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1021
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = Velset
+Trigger1 = 1
+x = 8
+y = 0
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S100, 0
+Volumescale = 100
+
+[State 200]
+Type = ChangeState
+Triggerall = Time >1
+Trigger1 = P2Bodydist X<65
+Trigger2 = Time >5
+Value = 1024
+;-------------------------------------------------------------------
+;Ground Upper Rush Medium #3
+[StateDef 1024]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1022
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = Velset
+Trigger1 = 1
+x = 8
+y = 0
+
+[State 200]
+Type = ChangeState
+Triggerall = Time >5
+Trigger1 = P2Bodydist X<65
+Trigger2 = Time >8
+Value = 1025
+
+;-------------------------------------------------------------------
+;Ground Upper Rush Medium Attack
+[StateDef 1025]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1024
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+x = 8
+y = 0
+
+[State 0, stop]
+type = Veladd
+Trigger1 = vel x >0
+Trigger1 = time>0
+x = -0.8
+
+[State 0, stop]
+type = Velset
+Trigger1 = time >0
+Trigger1 = vel x <= 0
+Trigger2 = animelem = 5
+x = 0
+y = 0
+
+[State 220]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !Time
+Attr = SCA, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 170,35
+GetPower = 0
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -66+Floor(P2Dist X)/2, -100 - (AnimElem=4,>0)*20 - (AnimElem=5,>0)*10
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Up
+Ground.Type = Low
+Ground.SlideTime = 22
+Ground.HitTime = 22
+Guard.HitTime = 22
+Air.HitTime = 99
+Ground.Velocity = -2.2*Const(Size.XScale), -6.1
+Guard.Velocity = -9*Const(Size.XScale)
+Air.Velocity = -3.2*Const(Size.XScale), -6.1
+Ground.CornerPush.VelOff = -10*Const(Size.XScale)
+Fall = 1
+Fall.Recover = 0
+YAccel = .3
+P2Facing = 1
+air.fall = 1
+
+[State 200]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 11
+ctrl = 1
+
+;-------------------------------------------------------------------
+;Ground Upper Rush Strong #1
+[StateDef 1026]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1020
+VelSet = 0
+SprPriority = 2
+
+[State 0, super]
+type = Poweradd
+Trigger1 = time = 0
+value = 420
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 2
+Volumescale = 100
+
+[State 0, stop]
+type = Velset
+Trigger1 = 1
+x = 8
+y = 0
+
+[State 200]
+Type = ChangeState
+Triggerall = Time >1
+Trigger1 = P2Bodydist X<65
+Trigger2 = Time >3
+Value = 1027
+;-------------------------------------------------------------------
+;Ground Upper Rush Strong #2
+[StateDef 1027]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1021
+VelSet = 0
+SprPriority = 2
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S100, 0
+Volumescale = 100
+
+[State 0, stop]
+type = Velset
+Trigger1 = 1
+x = 8
+y = 0
+
+[State 200]
+Type = ChangeState
+Triggerall = Time >1
+Trigger1 = P2Bodydist X<65
+Trigger2 = Time >9
+Value = 1028
+;-------------------------------------------------------------------
+;Ground Upper Rush Strong #3
+[StateDef 1028]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1022
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = Velset
+Trigger1 = 1
+x = 8
+y = 0
+
+[State 200]
+Type = ChangeState
+Triggerall = Time >6
+Trigger1 = P2Bodydist X<65
+Trigger2 = Time >12
+Value = 1029
+
+;-------------------------------------------------------------------
+;Ground Upper Rush Strong Attack
+[StateDef 1029]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1025
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+x = 8
+y = 0
+
+[State 0, stop]
+type = Veladd
+Trigger1 = vel x >0
+Trigger1 = time>0
+x = -0.8
+
+[State 0, stop]
+type = Velset
+Trigger1 = time >0
+Trigger1 = vel x <= 0
+Trigger2 = animelem = 5
+x = 0
+y = 0
+
+[State 220]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !Time
+Attr = SCA, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 180,45
+GetPower = 0
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -66+Floor(P2Dist X)/2, -100 - (AnimElem=4,>0)*20 - (AnimElem=5,>0)*10
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Up
+Ground.Type = Low
+Ground.SlideTime = 22
+Ground.HitTime = 22
+Guard.HitTime = 22
+Air.HitTime = 99
+Ground.Velocity = -2.4*Const(Size.XScale), -6.2
+Guard.Velocity = -9*Const(Size.XScale)
+Air.Velocity = -3.4*Const(Size.XScale), -6.2
+Ground.CornerPush.VelOff = -10*Const(Size.XScale)
+Fall = 1
+Fall.Recover = 0
+YAccel = .3
+P2Facing = 1
+air.fall = 1
+
+[State 200]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 11
+ctrl = 1
+
+;-------------------------------------------------------------------
+;Buffalo Headbutt Light
+[StateDef 1100]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1100
+VelSet = 0
+SprPriority = 2
+
+[State -2, nothitby]
+type = nothitby
+Trigger1 = 1
+value = SCA
+
+[State 0, super]
+type = Poweradd
+Trigger1 = time = 0
+value = 400
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+x = 0
+y = 0
+
+[State 500, 6]
+Type = StateTypeSet
+Trigger1 = AnimElem = 3
+Value = A
+
+[State 0, stop]
+type = Velset
+Trigger1 = animelem = 3
+x = 4
+y = -6
+
+[State 0, stop]
+type = Veladd
+Trigger1 = animelemtime(4) >0
+Trigger1 = vel x >0
+Trigger1 = vel y <0
+x = -0.1
+y = 0.2
+
+[State 220]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !Time
+Attr = SCA, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 100,20
+GetPower = 0
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -66+Floor(P2Dist X)/2, -70 - (AnimElem=3,>0)*20 - (AnimElem=4,>0)*30
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Hard
+Ground.Type = Low
+Ground.SlideTime = 22
+Ground.HitTime = 22
+Guard.HitTime = 22
+Air.HitTime = 99
+Ground.Velocity = -2.5*Const(Size.XScale), -6.4
+Guard.Velocity = -9*Const(Size.XScale)
+Air.Velocity = -2.5*Const(Size.XScale), -6.4
+Ground.CornerPush.VelOff = -10*Const(Size.XScale)
+Fall = 1
+Fall.Recover = 0
+YAccel = .3
+P2Facing = 1
+air.fall = 1
+
+[State 200]
+Type = ChangeState
+Trigger1 = animtime = 0
+Value = 1101
+
+;-------------------------------------------------------------------
+;Buffalo Headbutt Light Fall
+[StateDef 1101]
+Type = A
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1130
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+x = 0
+y = 0
+
+[State 5030, 2]
+type = VelAdd
+Trigger1 = time >0
+y = 0.5
+
+[State 200]
+Type = ChangeState
+trigger1 = Time > 5
+trigger1 = Pos Y >= 0
+Value = 1110
+
+;-------------------------------------------------------------------
+;Buffalo Headbutt Medium
+[StateDef 1102]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1110
+VelSet = 0
+SprPriority = 2
+
+[State -2, nothitby]
+type = nothitby
+Trigger1 = animelemtime(4) <0
+value = SCA
+
+[State 0, super]
+type = Poweradd
+Trigger1 = time = 0
+value = 410
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+x = 0
+y = 0
+
+[State 500, 6]
+Type = StateTypeSet
+Trigger1 = AnimElem = 3
+Value = A
+
+[State 0, stop]
+type = Velset
+Trigger1 = animelem = 3
+x = 6.5
+y = -5.8
+
+[State 0, stop]
+type = Veladd
+Trigger1 = animelemtime(4) >0
+Trigger1 = vel x >0
+Trigger1 = vel y <0
+x = -0.1
+y = 0.2
+
+[State 220]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !Time
+Attr = SCA, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 120,30
+GetPower = 0
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -66+Floor(P2Dist X)/2, -70 - (AnimElem=3,>0)*20 - (AnimElem=4,>0)*30
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Hard
+Ground.Type = Low
+Ground.SlideTime = 22
+Ground.HitTime = 22
+Guard.HitTime = 22
+Air.HitTime = 99
+Ground.Velocity = -2.5*Const(Size.XScale), -6.4
+Guard.Velocity = -9*Const(Size.XScale)
+Air.Velocity = -2.5*Const(Size.XScale), -6.4
+Ground.CornerPush.VelOff = -10*Const(Size.XScale)
+Fall = 1
+Fall.Recover = 0
+YAccel = .3
+P2Facing = 1
+air.fall = 1
+
+[State 200]
+Type = ChangeState
+Trigger1 = animtime = 0
+Value = 1103
+
+;-------------------------------------------------------------------
+;Buffalo Headbutt Medium Fall
+[StateDef 1103]
+Type = A
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1130
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+x = 0
+y = 0
+
+[State 5030, 2]
+type = VelAdd
+Trigger1 = time >0
+y = 0.45
+
+[State 200]
+Type = ChangeState
+trigger1 = Time > 5
+trigger1 = Pos Y >= 0
+Value = 1110
+
+;-------------------------------------------------------------------
+;Buffalo Headbutt Strong
+[StateDef 1104]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1120
+VelSet = 0
+SprPriority = 2
+
+[State -2, nothitby]
+type = nothitby
+Trigger1 = animelemtime(4) <0
+value = SCA
+
+[State 0, super]
+type = Poweradd
+Trigger1 = time = 0
+value = 420
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+x = 0
+y = 0
+
+[State 500, 6]
+Type = StateTypeSet
+Trigger1 = AnimElem = 3
+Value = A
+
+[State 0, stop]
+type = Velset
+Trigger1 = animelem = 3
+x = 9.74
+y = -5.7
+
+[State 0, stop]
+type = Veladd
+Trigger1 = animelemtime(4) >0
+Trigger1 = vel x >0
+Trigger1 = vel y <0
+x = -0.1
+y = 0.2
+
+[State 220]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !Time
+Attr = SCA, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 140,40
+GetPower = 0
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -66+Floor(P2Dist X)/2, -70 - (AnimElem=3,>0)*20 - (AnimElem=4,>0)*30
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Hard
+Ground.Type = Low
+Ground.SlideTime = 22
+Ground.HitTime = 22
+Guard.HitTime = 22
+Air.HitTime = 99
+Ground.Velocity = -2.5*Const(Size.XScale), -6.4
+Guard.Velocity = -9*Const(Size.XScale)
+Air.Velocity = -2.5*Const(Size.XScale), -6.4
+Ground.CornerPush.VelOff = -10*Const(Size.XScale)
+Fall = 1
+Fall.Recover = 0
+YAccel = .3
+P2Facing = 1
+air.fall = 1
+
+[State 200]
+Type = ChangeState
+Trigger1 = animtime = 0
+Value = 1105
+
+;-------------------------------------------------------------------
+;Buffalo Headbutt Strong Fall
+[StateDef 1105]
+Type = A
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1130
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+x = 0
+y = 0
+
+[State 5030, 2]
+type = VelAdd
+Trigger1 = time >0
+y = 0.45
+
+[State 200]
+Type = ChangeState
+trigger1 = Time > 5
+trigger1 = Pos Y >= 0
+Value = 1110
+
+;-------------------------------------------------------------------
+;Buffalo HeadbuttLand
+[StateDef 1110]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = Ifelse(prevstateno=1101||prevstateno=1105,1131,1132)
+VelSet = 0
+SprPriority = 2
+
+[State 200]
+Type = PlaySnd
+Trigger1 = animelem = 1
+Value = S4, 0
+Volumescale = 100
+
+[State 0, stop]
+type = Velset
+Trigger1 = 1
+x = 0
+y = 0
+
+[State 0, stop]
+type = posset
+trigger1 = 1
+y = 0
+
+[State 200]
+Type = ChangeState
+trigger1 = animtime = 0
+Value = 0
+ctrl = 1
+
+;-------------------------------------------------------------------
+;Turn Around Punch #1
+[StateDef 1201]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1200
+VelSet = 0
+SprPriority = 2
+
+[State 0, super]
+type = Poweradd
+Trigger1 = time = 0
+value = 400
+
+[State 200, 2]
+Type = VarRangeSet
+trigger1 = 1
+Value = 1
+First = 25
+Last = 28
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+Trigger2 = time <= 19
+x = 0
+y = 0
+
+
+[State 0, stop]
+type = Velset
+Trigger1 = animelem = 5
+x = 7
+y = 0
+[State 0, stop]
+type = Veladd
+;Trigger1 = vel x >0
+Trigger1 = time>20
+x = -0.38
+[State 0, stop]
+type = Velset
+;Trigger1 = time >20
+;Trigger1 = vel x <= 0
+Trigger1 = animelem = 11
+x = 0
+y = 0
+
+
+
+[State 200]
+Type = PlaySnd
+Trigger1 = animelem = 2
+Value = S300, 1
+Volumescale = 100
+
+[State 200]
+Type = PlaySnd
+Trigger1 = animelem = 8
+Value = S0, 2
+Volumescale = 100
+
+[State 220]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = S, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 100,20
+GetPower = 0
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -92+Floor(P2Dist X)/2, -70
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Hard
+Air.AnimType = Back
+Ground.Type = High
+Ground.SlideTime = 21
+Ground.HitTime = 21
+Guard.HitTime = 29
+Air.HitTime = 99
+Ground.Velocity = -11*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -6.2
+Ground.CornerPush.VelOff = -19*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+fall = 0
+air.fall = 1
+fall.recover = 0
+
+[State 200]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 0
+ctrl = 1
+
+;-------------------------------------------------------------------
+;Turn Around Punch #2
+[StateDef 1202]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1200
+VelSet = 0
+SprPriority = 2
+
+[State 200, 2]
+Type = VarRangeSet
+trigger1 = 1
+Value = 1
+First = 25
+Last = 28
+
+[State 0, super]
+type = Poweradd
+Trigger1 = time = 0
+value = 420
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+Trigger2 = time <= 19
+x = 0
+y = 0
+
+
+[State 0, stop]
+type = Velset
+Trigger1 = animelem = 5
+x = 8
+y = 0
+[State 0, stop]
+type = Veladd
+;Trigger1 = vel x >0
+Trigger1 = time>20
+x = -0.38
+[State 0, stop]
+type = Velset
+;Trigger1 = time >20
+;Trigger1 = vel x <= 0
+Trigger1 = animelem = 11
+x = 0
+y = 0
+
+
+
+[State 200]
+Type = PlaySnd
+Trigger1 = animelem = 2
+Value = S300, 2
+Volumescale = 100
+
+[State 200]
+Type = PlaySnd
+Trigger1 = animelem = 8
+Value = S0, 2
+Volumescale = 100
+
+[State 220]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = S, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 160,30
+GetPower = 0
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -94+Floor(P2Dist X)/2, -70
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Hard
+Air.AnimType = Back
+Ground.Type = High
+Ground.SlideTime = 21
+Ground.HitTime = 21
+Guard.HitTime = 29
+Air.HitTime = 99
+Ground.Velocity = -11*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -6.2
+Ground.CornerPush.VelOff = -19*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+fall = 0
+air.fall = 1
+fall.recover = 0
+
+[State 200]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 0
+ctrl = 1
+
+;-------------------------------------------------------------------
+;Turn Around Punch #3
+[StateDef 1203]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1200
+VelSet = 0
+SprPriority = 2
+
+[State 200, 2]
+Type = VarRangeSet
+trigger1 = 1
+Value = 1
+First = 25
+Last = 28
+
+[State 0, super]
+type = Poweradd
+Trigger1 = time = 0
+value = 440
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+Trigger2 = time <= 19
+x = 0
+y = 0
+
+
+[State 0, stop]
+type = Velset
+Trigger1 = animelem = 5
+x = 8
+y = 0
+[State 0, stop]
+type = Veladd
+Trigger1 = vel x >0
+Trigger1 = time>20
+x = -0.28
+[State 0, stop]
+type = Velset
+Trigger1 = time >20
+Trigger1 = vel x <= 0
+Trigger2 = animelem = 11
+x = 0
+y = 0
+
+
+
+[State 200]
+Type = PlaySnd
+Trigger1 = animelem = 2
+Value = S300, 3
+Volumescale = 100
+
+[State 200]
+Type = PlaySnd
+Trigger1 = animelem = 8
+Value = S0, 2
+Volumescale = 100
+
+[State 220]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = S, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 220,40
+GetPower = 0
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -97+Floor(P2Dist X)/2, -70
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Hard
+Air.AnimType = Back
+Ground.Type = High
+Ground.SlideTime = 21
+Ground.HitTime = 21
+Guard.HitTime = 29
+Air.HitTime = 99
+Ground.Velocity = -11*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -6.2
+Ground.CornerPush.VelOff = -19*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+fall = 0
+air.fall = 1
+fall.recover = 0
+
+[State 200]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 0
+ctrl = 1
+
+;-------------------------------------------------------------------
+;Turn Around Punch #4
+[StateDef 1204]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1200
+VelSet = 0
+SprPriority = 2
+
+[State 200, 2]
+Type = VarRangeSet
+trigger1 = 1
+Value = 1
+First = 25
+Last = 28
+
+[State 0, super]
+type = Poweradd
+Trigger1 = time = 0
+value = 460
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+Trigger2 = time <= 19
+x = 0
+y = 0
+
+
+[State 0, stop]
+type = Velset
+Trigger1 = animelem = 5
+x = 8
+y = 0
+[State 0, stop]
+type = Veladd
+Trigger1 = vel x >0
+Trigger1 = time>20
+x = -0.2
+[State 0, stop]
+type = Velset
+Trigger1 = time >20
+Trigger1 = vel x <= 0
+Trigger2 = animelem = 11
+x = 0
+y = 0
+
+
+
+[State 200]
+Type = PlaySnd
+Trigger1 = animelem = 2
+Value = S300, 4
+Volumescale = 100
+
+[State 200]
+Type = PlaySnd
+Trigger1 = animelem = 8
+Value = S0, 2
+Volumescale = 100
+
+[State 220]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = S, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 280,50
+GetPower = 0
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -100+Floor(P2Dist X)/2, -70
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Hard
+Air.AnimType = Back
+Ground.Type = High
+Ground.SlideTime = 21
+Ground.HitTime = 21
+Guard.HitTime = 29
+Air.HitTime = 99
+Ground.Velocity = -11*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -6.2
+Ground.CornerPush.VelOff = -19*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+fall = 0
+air.fall = 1
+fall.recover = 0
+
+[State 200]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 0
+ctrl = 1
+
+;-------------------------------------------------------------------
+;Turn Around Punch #5
+[StateDef 1205]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1200
+VelSet = 0
+SprPriority = 2
+
+[State 200, 2]
+Type = VarRangeSet
+trigger1 = 1
+Value = 1
+First = 25
+Last = 28
+
+[State 0, super]
+type = Poweradd
+Trigger1 = time = 0
+value = 480
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+Trigger2 = time <= 19
+x = 0
+y = 0
+
+
+[State 0, stop]
+type = Velset
+Trigger1 = animelem = 5
+x = 8
+y = 0
+[State 0, stop]
+type = Veladd
+Trigger1 = vel x >0
+Trigger1 = time>20
+x = -0.11
+[State 0, stop]
+type = Velset
+Trigger1 = time >20
+Trigger1 = vel x <= 0
+Trigger2 = animelem = 11
+x = 0
+y = 0
+
+
+
+[State 200]
+Type = PlaySnd
+Trigger1 = animelem = 2
+Value = S300, 5
+Volumescale = 100
+
+[State 200]
+Type = PlaySnd
+Trigger1 = animelem = 8
+Value = S0, 2
+Volumescale = 100
+
+[State 220]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = S, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 340,60
+GetPower = 0
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -107+Floor(P2Dist X)/2, -70
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Hard
+Air.AnimType = Back
+Ground.Type = High
+Ground.SlideTime = 21
+Ground.HitTime = 21
+Guard.HitTime = 29
+Air.HitTime = 99
+Ground.Velocity = -11*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -6.2
+Ground.CornerPush.VelOff = -19*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+fall = 0
+air.fall = 1
+fall.recover = 0
+
+[State 200]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 0
+ctrl = 1
+
+;-------------------------------------------------------------------
+;Turn Around Punch #6
+[StateDef 1206]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1200
+VelSet = 0
+SprPriority = 2
+
+[State 200, 2]
+Type = VarRangeSet
+trigger1 = 1
+Value = 1
+First = 25
+Last = 28
+
+[State 0, super]
+type = Poweradd
+Trigger1 = time = 0
+value = 500
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+Trigger2 = time <= 19
+x = 0
+y = 0
+
+
+[State 0, stop]
+type = Velset
+Trigger1 = animelem = 5
+x = 9
+y = 0
+[State 0, stop]
+type = Veladd
+Trigger1 = vel x >0
+Trigger1 = time>20
+x = -0.1
+[State 0, stop]
+type = Velset
+Trigger1 = time >20
+Trigger1 = vel x <= 0
+Trigger2 = animelem = 11
+x = 0
+y = 0
+
+
+
+[State 200]
+Type = PlaySnd
+Trigger1 = animelem = 2
+Value = S300, 6
+Volumescale = 100
+
+[State 200]
+Type = PlaySnd
+Trigger1 = animelem = 8
+Value = S0, 2
+Volumescale = 100
+
+[State 220]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = S, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 400,70
+GetPower = 0
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -114+Floor(P2Dist X)/2, -70
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Hard
+Air.AnimType = Back
+Ground.Type = High
+Ground.SlideTime = 21
+Ground.HitTime = 21
+Guard.HitTime = 29
+Air.HitTime = 99
+Ground.Velocity = -11*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -6.2
+Ground.CornerPush.VelOff = -19*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+fall = 0
+air.fall = 1
+fall.recover = 0
+
+[State 200]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 0
+ctrl = 1
+
+;-------------------------------------------------------------------
+;Turn Around Punch #7
+[StateDef 1207]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1200
+VelSet = 0
+SprPriority = 2
+
+[State 200, 2]
+Type = VarRangeSet
+trigger1 = 1
+Value = 1
+First = 25
+Last = 28
+
+[State 0, super]
+type = Poweradd
+Trigger1 = time = 0
+value = 520
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+Trigger2 = time <= 19
+x = 0
+y = 0
+
+
+[State 0, stop]
+type = Velset
+Trigger1 = animelem = 5
+x = 11
+y = 0
+[State 0, stop]
+type = Veladd
+Trigger1 = vel x >0
+Trigger1 = time>20
+x = -0.18
+[State 0, stop]
+type = Velset
+Trigger1 = time >20
+Trigger1 = vel x <= 0
+Trigger2 = animelem = 11
+x = 0
+y = 0
+
+
+
+[State 200]
+Type = PlaySnd
+Trigger1 = animelem = 2
+Value = S300, 7
+Volumescale = 100
+
+[State 200]
+Type = PlaySnd
+Trigger1 = animelem = 8
+Value = S0, 2
+Volumescale = 100
+
+[State 220]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = S, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 455,80
+GetPower = 0
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -120+Floor(P2Dist X)/2, -70
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Hard
+Air.AnimType = Back
+Ground.Type = High
+Ground.SlideTime = 21
+Ground.HitTime = 21
+Guard.HitTime = 29
+Air.HitTime = 99
+Ground.Velocity = -11*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -6.2
+Ground.CornerPush.VelOff = -19*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+fall = 0
+air.fall = 1
+fall.recover = 0
+
+[State 200]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 0
+ctrl = 1
+
+;-------------------------------------------------------------------
+;Turn Around Punch # FINAL
+[StateDef 1208]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 1200
+VelSet = 0
+SprPriority = 2
+
+[State 200, 2]
+Type = VarRangeSet
+trigger1 = 1
+Value = 1
+First = 25
+Last = 28
+
+[State 0, super]
+type = Poweradd
+Trigger1 = time = 0
+value = 550
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+Trigger2 = time <= 19
+x = 0
+y = 0
+
+
+[State 0, stop]
+type = Velset
+Trigger1 = animelem = 5
+x = 12
+y = 0
+[State 0, stop]
+type = Veladd
+Trigger1 = vel x >0
+Trigger1 = time>20
+x = -0.1
+[State 0, stop]
+type = Velset
+Trigger1 = time >20
+Trigger1 = vel x <= 0
+Trigger2 = animelem = 11
+x = 0
+y = 0
+
+
+
+[State 200]
+Type = PlaySnd
+Trigger1 = animelem = 2
+Value = S300, 10
+Volumescale = 100
+
+[State 200]
+Type = PlaySnd
+Trigger1 = animelem = 8
+Value = S0, 2
+Volumescale = 100
+
+[State 220]
+Type = HitDef
+trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = S, NA
+HitFlag = MA
+GuardFlag = M
+Damage = 510,100
+GetPower = 0
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -128+Floor(P2Dist X)/2, -70
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Hard
+Air.AnimType = Back
+Ground.Type = High
+Ground.SlideTime = 21
+Ground.HitTime = 21
+Guard.HitTime = 29
+Air.HitTime = 99
+Ground.Velocity = -11*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -6.2
+Ground.CornerPush.VelOff = -19*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+fall = 0
+air.fall = 1
+fall.recover = 0
+
+[State 200]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 0
+ctrl = 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;-------------------------------------------------------------------
+;CRAZY BUFFALO PUNCH PREPARE
+[StateDef 2000]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 2000
+SprPriority = 2
+
+[State -2, nothitby]
+type = nothitby
+Trigger1 = 1
+value = SCA
+
+[State -2]
+Type = VarSet
+Trigger1 = 1
+V = 24
+Value = 0
+
+[State 0, super]
+type = Poweradd
+Trigger1 = time = 0
+value = -3000
+
+[State 300]
+type = Pause
+trigger1 = Time = 0
+time = 17
+movetime = 17
+
+[State 2000]
+Type = Explod
+Trigger1 = Time = 0
+Anim = 10090
+Pos = 10,-5
+PosType = P1
+OwnPal = 1
+SprPriority = 10
+PauseMoveTime = -1
+BindTime = -1
+Scale = Const(Size.XScale), 1
+
+[State 2200]
+Type = AfterImage
+Trigger1 = Time = 0
+Time = 120
+Trans = None
+FrameGap = 3
+Length = 15
+PalColor = 0
+PalBright = 90, 90, 121
+PalContrast = 170, 170, 245
+PalAdd = -25, -25, -25
+
+[State 2200]
+Type = AfterImage
+Trigger1 = Time = 120
+Time = 0
+
+[State 901]
+type = PlaySnd
+trigger1 = Time = 0
+value = S210,0
+Volumescale = 100
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 0, stop]
+type = Velset
+trigger1 = 1
+x = 0
+y = 0
+
+[State 200]
+Type = ChangeState
+Trigger1 = animtime = 0
+Value = 2001
+
+;-------------------------------------------------------------------
+;CRAZY BUFFALO PUNCH 1ST PUNCH
+[StateDef 2001]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 2001
+VelSet = 0
+SprPriority = 2
+
+[State -2, nothitby]
+type = nothitby
+Trigger1 = 1
+value = SCA
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 2
+Volumescale = 100
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 1
+Value = S100, 0
+Volumescale = 100
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+x = 8
+y = 0
+
+[State 0, stop]
+type = Veladd
+Trigger1 = vel x >0
+Trigger1 = time>0
+x = -0.3
+
+[State 0, stop]
+type = Velset
+Trigger1 = time >0
+Trigger1 = vel x <= 0
+Trigger2 = animelem = 5
+x = 0
+y = 0
+
+[State 220]
+Type = HitDef
+;trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = S, NA
+HitFlag = MAF
+GuardFlag = M
+Damage = 100,20
+GetPower = 0
+GivePower = 0
+PauseTime = 4, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -92+Floor(P2Dist X)/2, -70
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Hard
+Air.AnimType = Back
+Ground.Type = High
+Ground.SlideTime = 25
+Ground.HitTime = 25
+Guard.HitTime = 25
+Air.HitTime = 99
+Ground.Velocity = -11*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -6.2
+Ground.CornerPush.VelOff = -19*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+fall = 0
+air.fall = 1
+fall.recover = 0
+
+
+[State -2]
+Type = VarSet
+Trigger1 = time = 0
+V = 24
+Value = 0
+[State -2]
+Type = VarSet
+Triggerall = time >0
+Trigger1 = command = "a"
+Trigger2 = command = "b"
+Trigger3 = command = "c"
+V = 24
+Value = 1
+
+[State 200]
+Type = ChangeState
+Triggerall = Var(24) = 1
+Triggerall = RoundState = 2
+Trigger1 = Time >14
+Trigger1 = P2Bodydist X<65
+Trigger2 = AnimTime = 0
+Value = 2012
+
+[State 200]
+Type = ChangeState
+Triggerall = Var(24) = 0
+Triggerall = RoundState = 2
+Trigger1 = Time >14
+Trigger1 = P2Bodydist X<65
+Trigger2 = AnimTime = 0
+Value = 2002
+
+[State 200]
+Type = ChangeState
+Triggerall = RoundState = 3
+Trigger1 = Time >14
+Trigger1 = P2Bodydist X<65
+Trigger2 = AnimTime = 0
+Value = 2005
+
+;-------------------------------------------------------------------
+;CRAZY BUFFALO PUNCH 2ND PUNCH
+[StateDef 2002]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 2002
+VelSet = 0
+SprPriority = 2
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 2
+Volumescale = 100
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 1
+Value = S100, 0
+Volumescale = 100
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+x = 8
+y = 0
+
+[State 0, stop]
+type = Veladd
+Trigger1 = vel x >0
+Trigger1 = time>0
+x = -0.3
+
+[State 0, stop]
+type = Velset
+Trigger1 = time >0
+Trigger1 = vel x <= 0
+x = 0
+y = 0
+
+[State 220]
+Type = HitDef
+;trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = S, NA
+HitFlag = MAF
+GuardFlag = M
+Damage = 100,20
+GetPower = 0
+GivePower = 0
+PauseTime = 4, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -92+Floor(P2Dist X)/2, -70
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Hard
+Air.AnimType = Back
+Ground.Type = Low
+Ground.SlideTime = 25
+Ground.HitTime = 25
+Guard.HitTime = 25
+Air.HitTime = 99
+Ground.Velocity = -11*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -6.2
+Ground.CornerPush.VelOff = -19*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+fall = 0
+air.fall = 1
+fall.recover = 0
+
+[State -2]
+Type = VarSet
+Trigger1 = time = 0
+V = 24
+Value = 0
+[State -2]
+Type = VarSet
+Triggerall = time >0
+Trigger1 = command = "a"
+Trigger2 = command = "b"
+Trigger3 = command = "c"
+V = 24
+Value = 1
+
+[State 200]
+Type = ChangeState
+Triggerall = Var(24) = 1
+Triggerall = RoundState = 2
+Trigger1 = AnimTime = 0
+Trigger2 = movecontact = 1
+Trigger2 = time >=10
+Value = 2013
+
+[State 200]
+Type = ChangeState
+Triggerall = Var(24) = 0
+Triggerall = RoundState = 2
+Trigger1 = AnimTime = 0
+Trigger2 = movecontact = 1
+Trigger2 = time >=10
+Value = 2003
+
+[State 200]
+Type = ChangeState
+Triggerall = RoundState = 3
+Trigger1 = AnimTime = 0
+Trigger2 = movecontact = 1
+Trigger2 = time >=10
+Value = 2005
+
+;-------------------------------------------------------------------
+;CRAZY BUFFALO PUNCH 3rd PUNCH
+[StateDef 2003]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 2002
+VelSet = 0
+SprPriority = 2
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 2
+Volumescale = 100
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 1
+Value = S100, 0
+Volumescale = 100
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+x = 8
+y = 0
+
+[State 0, stop]
+type = Veladd
+Trigger1 = vel x >0
+Trigger1 = time>0
+x = -0.3
+
+[State 0, stop]
+type = Velset
+Trigger1 = time >0
+Trigger1 = vel x <= 0
+x = 0
+y = 0
+
+[State 220]
+Type = HitDef
+;trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = S, NA
+HitFlag = MAF
+GuardFlag = M
+Damage = 100,20
+GetPower = 0
+GivePower = 0
+PauseTime = 4, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -92+Floor(P2Dist X)/2, -70
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Hard
+Air.AnimType = Back
+Ground.Type = High
+Ground.SlideTime = 25
+Ground.HitTime = 25
+Guard.HitTime = 25
+Air.HitTime = 99
+Ground.Velocity = -11*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -6.2
+Ground.CornerPush.VelOff = -19*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+fall = 0
+air.fall = 1
+fall.recover = 0
+
+[State -2]
+Type = VarSet
+Trigger1 = time = 0
+V = 24
+Value = 0
+[State -2]
+Type = VarSet
+Triggerall = time >0
+Trigger1 = command = "a"
+Trigger2 = command = "b"
+Trigger3 = command = "c"
+V = 24
+Value = 1
+
+[State 200]
+Type = ChangeState
+Triggerall = Var(24) = 1
+Triggerall = RoundState = 2
+Trigger1 = AnimTime = 0
+Trigger2 = movecontact = 1
+Trigger2 = time >=10
+Value = 2014
+
+[State 200]
+Type = ChangeState
+Triggerall = Var(24) = 0
+Triggerall = RoundState = 2
+Trigger1 = AnimTime = 0
+Trigger2 = movecontact = 1
+Trigger2 = time >=10
+Value = 2004
+
+[State 200]
+Type = ChangeState
+Triggerall = RoundState = 3
+Trigger1 = AnimTime = 0
+Trigger2 = movecontact = 1
+Trigger2 = time >=10
+Value = 2005
+;-------------------------------------------------------------------
+;CRAZY BUFFALO PUNCH 4th PUNCH
+[StateDef 2004]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 2002
+VelSet = 0
+SprPriority = 2
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 2
+Volumescale = 100
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 1
+Value = S100, 0
+Volumescale = 100
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+x = 8
+y = 0
+
+[State 0, stop]
+type = Veladd
+Trigger1 = vel x >0
+Trigger1 = time>0
+x = -0.3
+
+[State 0, stop]
+type = Velset
+Trigger1 = time >0
+Trigger1 = vel x <= 0
+x = 0
+y = 0
+
+[State 220]
+Type = HitDef
+;trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = S, NA
+HitFlag = MAF
+GuardFlag = M
+Damage = 100,20
+GetPower = 0
+GivePower = 0
+PauseTime = 4, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -92+Floor(P2Dist X)/2, -70
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Hard
+Air.AnimType = Back
+Ground.Type = Low
+Ground.SlideTime = 25
+Ground.HitTime = 25
+Guard.HitTime = 25
+Air.HitTime = 99
+Ground.Velocity = -11*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -6.2
+Ground.CornerPush.VelOff = -19*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+fall = 0
+air.fall = 1
+fall.recover = 0
+
+[State -2]
+Type = VarSet
+Trigger1 = 1
+V = 24
+Value = 0
+
+[State 200]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Trigger2 = movecontact = 1
+Trigger2 = time >=10
+Value = 2005
+
+;-------------------------------------------------------------------
+;CRAZY BUFFALO PUNCH Prepare Final
+[StateDef 2005]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 2005
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = Velset
+Trigger1 = 1
+x = 0
+y = 0
+
+[State 200]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 2006
+
+;-------------------------------------------------------------------
+;CRAZY BUFFALO PUNCH FINAL
+[StateDef 2006]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 2006
+VelSet = 0
+SprPriority = 2
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+x = 8
+y = 0
+
+[State 0, stop]
+type = Veladd
+Trigger1 = vel x >0
+Trigger1 = time>0
+x = -0.8
+
+[State 0, stop]
+type = Velset
+Trigger1 = time >0
+Trigger1 = vel x <= 0
+Trigger2 = animelem = 6
+x = 0
+y = 0
+
+[State 220]
+Type = HitDef
+;trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !Time
+Attr = SCA, NA
+HitFlag = MAF
+GuardFlag = M
+Damage = 100,20
+GetPower = 0
+GivePower = 0
+PauseTime = 14, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -90+Floor(P2Dist X)/2, -60 - (AnimElem=4,>0)*20 - (AnimElem=5,>0)*10
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Hard
+Ground.Type = Low
+Ground.SlideTime = 22
+Ground.HitTime = 22
+Guard.HitTime = 22
+Air.HitTime = 99
+Ground.Velocity = -2.3*Const(Size.XScale), -6.2
+Guard.Velocity = -9*Const(Size.XScale)
+Air.Velocity = -3.3*Const(Size.XScale), -6.2
+Ground.CornerPush.VelOff = -10*Const(Size.XScale)
+Fall = 1
+Fall.Recover = 0
+YAccel = .3
+P2Facing = 1
+air.fall = 1
+
+[State 200]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Value = 0
+ctrl = 1
+
+;-------------------------------------------------------------------
+;CRAZY BUFFALO KICK PREPARE
+[StateDef 2010]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 2000
+SprPriority = 2
+
+[State -2, nothitby]
+type = nothitby
+Trigger1 = 1
+value = SCA
+
+[State -2]
+Type = VarSet
+Trigger1 = 1
+V = 24
+Value = 0
+
+[State 0, super]
+type = Poweradd
+Trigger1 = time = 0
+value = -3000
+
+[State 300]
+type = Pause
+trigger1 = Time = 0
+time = 17
+movetime = 17
+
+[State 2000]
+Type = Explod
+Trigger1 = Time = 0
+Anim = 10090
+Pos = 10,-5
+PosType = P1
+OwnPal = 1
+SprPriority = 10
+PauseMoveTime = -1
+BindTime = -1
+Scale = Const(Size.XScale), 1
+
+[State 2200]
+Type = AfterImage
+Trigger1 = Time = 0
+Time = 120
+Trans = None
+FrameGap = 3
+Length = 15
+PalColor = 0
+PalBright = 90, 90, 121
+PalContrast = 170, 170, 245
+PalAdd = -25, -25, -25
+
+[State 2200]
+Type = AfterImage
+Trigger1 = Time = 120
+Time = 0
+
+[State 901]
+type = PlaySnd
+trigger1 = Time = 0
+value = S210,0
+Volumescale = 100
+
+[State 0, stop]
+type = posset
+triggerall = enemy,AuthorName != "OMEGAPSYCHO-BOSS"
+trigger1 = Time = 0
+y = 0
+
+[State 0, stop]
+type = Velset
+trigger1 = 1
+x = 0
+y = 0
+
+[State 200]
+Type = ChangeState
+Trigger1 = animtime = 0
+Value = 2011
+
+;-------------------------------------------------------------------
+;CRAZY BUFFALO PUNCH 1ST KICK
+[StateDef 2011]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 2003
+VelSet = 0
+SprPriority = 2
+
+[State -2, nothitby]
+type = nothitby
+Trigger1 = 1
+value = SCA
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 2
+Volumescale = 100
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 1
+Value = S100, 0
+Volumescale = 100
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+x = 8
+y = 0
+
+[State 0, stop]
+type = Veladd
+Trigger1 = vel x >0
+Trigger1 = time>0
+x = -0.3
+
+[State 0, stop]
+type = Velset
+Trigger1 = time >0
+Trigger1 = vel x <= 0
+x = 0
+y = 0
+
+[State 220]
+Type = HitDef
+;trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = S, NA
+HitFlag = MAF
+GuardFlag = M
+Damage = 100,20
+GetPower = 0
+GivePower = 0
+PauseTime = 4, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -66+Floor(P2Dist X)/2, -100
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Hard
+Air.AnimType = Back
+Ground.Type = High
+Ground.SlideTime = 25
+Ground.HitTime = 25
+Guard.HitTime = 25
+Air.HitTime = 99
+Ground.Velocity = -11*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -6.2
+Ground.CornerPush.VelOff = -19*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+fall = 0
+air.fall = 1
+fall.recover = 0
+
+[State 200]
+Type = ChangeState
+Triggerall = RoundState = 2
+Trigger1 = Time >14
+Trigger1 = P2Bodydist X<65
+Trigger2 = AnimTime = 0
+Value = 2002
+
+[State 200]
+Type = ChangeState
+Triggerall = RoundState = 3
+Trigger1 = Time >14
+Trigger1 = P2Bodydist X<65
+Trigger2 = AnimTime = 0
+Value = 2005
+
+;-------------------------------------------------------------------
+;CRAZY BUFFALO PUNCH 2ND KICK
+[StateDef 2012]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 2004
+VelSet = 0
+SprPriority = 2
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 2
+Volumescale = 100
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 1
+Value = S100, 0
+Volumescale = 100
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+x = 8
+y = 0
+
+[State 0, stop]
+type = Veladd
+Trigger1 = vel x >0
+Trigger1 = time>0
+x = -0.3
+
+[State 0, stop]
+type = Velset
+Trigger1 = time >0
+Trigger1 = vel x <= 0
+x = 0
+y = 0
+
+[State 220]
+Type = HitDef
+;trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = S, NA
+HitFlag = MAF
+GuardFlag = M
+Damage = 100,20
+GetPower = 0
+GivePower = 0
+PauseTime = 4, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -66+Floor(P2Dist X)/2, -100
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Hard
+Air.AnimType = Back
+Ground.Type = Low
+Ground.SlideTime = 25
+Ground.HitTime = 25
+Guard.HitTime = 25
+Air.HitTime = 99
+Ground.Velocity = -11*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -6.2
+Ground.CornerPush.VelOff = -19*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+fall = 0
+air.fall = 1
+fall.recover = 0
+
+[State 200]
+Type = ChangeState
+Triggerall = RoundState = 2
+Trigger1 = AnimTime = 0
+Trigger2 = movecontact = 1
+Trigger2 = time >=10
+Value = 2003
+
+[State 200]
+Type = ChangeState
+Triggerall = RoundState = 3
+Trigger1 = AnimTime = 0
+Trigger2 = movecontact = 1
+Trigger2 = time >=10
+Value = 2005
+
+;-------------------------------------------------------------------
+;CRAZY BUFFALO PUNCH 3rd KICK
+[StateDef 2013]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 2004
+VelSet = 0
+SprPriority = 2
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 2
+Volumescale = 100
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 1
+Value = S100, 0
+Volumescale = 100
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+x = 8
+y = 0
+
+[State 0, stop]
+type = Veladd
+Trigger1 = vel x >0
+Trigger1 = time>0
+x = -0.3
+
+[State 0, stop]
+type = Velset
+Trigger1 = time >0
+Trigger1 = vel x <= 0
+x = 0
+y = 0
+
+[State 220]
+Type = HitDef
+;trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = S, NA
+HitFlag = MAF
+GuardFlag = M
+Damage = 100,20
+GetPower = 0
+GivePower = 0
+PauseTime = 4, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -66+Floor(P2Dist X)/2, -100
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Hard
+Air.AnimType = Back
+Ground.Type = High
+Ground.SlideTime = 25
+Ground.HitTime = 25
+Guard.HitTime = 25
+Air.HitTime = 99
+Ground.Velocity = -11*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -6.2
+Ground.CornerPush.VelOff = -19*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+fall = 0
+air.fall = 1
+fall.recover = 0
+
+[State 200]
+Type = ChangeState
+Triggerall = RoundState = 2
+Trigger1 = AnimTime = 0
+Trigger2 = movecontact = 1
+Trigger2 = time >=10
+Value = 2004
+
+[State 200]
+Type = ChangeState
+Triggerall = RoundState = 3
+Trigger1 = AnimTime = 0
+Trigger2 = movecontact = 1
+Trigger2 = time >=10
+Value = 2005
+;-------------------------------------------------------------------
+;CRAZY BUFFALO PUNCH 4th KICK
+[StateDef 2014]
+Type = S
+MoveType = A
+Physics = N
+Ctrl = 0
+Anim = 2004
+VelSet = 0
+SprPriority = 2
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S0, 2
+Volumescale = 100
+
+[State 200]
+Type = PlaySnd
+Trigger1 = Time = 1
+Value = S100, 0
+Volumescale = 100
+
+[State 0, stop]
+type = Velset
+Trigger1 = time = 0
+x = 8
+y = 0
+
+[State 0, stop]
+type = Veladd
+Trigger1 = vel x >0
+Trigger1 = time>0
+x = -0.3
+
+[State 0, stop]
+type = Velset
+Trigger1 = time >0
+Trigger1 = vel x <= 0
+x = 0
+y = 0
+
+[State 220]
+Type = HitDef
+;trigger1= (p2stateno!=[5020,5050]) && p2stateno!=5040
+Trigger1 = !time
+Attr = S, NA
+HitFlag = MAF
+GuardFlag = M
+Damage = 100,20
+GetPower = 0
+GivePower = 0
+PauseTime = 4, 14
+SparkNo = S54+TeamSide
+Guard.SparkNo = S50
+SparkXY = -66+Floor(P2Dist X)/2, -100
+HitSound = S1, 2
+GuardSound = S3, 0
+AnimType = Hard
+Air.AnimType = Back
+Ground.Type = Low
+Ground.SlideTime = 25
+Ground.HitTime = 25
+Guard.HitTime = 25
+Air.HitTime = 99
+Ground.Velocity = -11*Const(Size.XScale)
+Air.Velocity = -2*Const(Size.XScale), -6.2
+Ground.CornerPush.VelOff = -19*Const(Size.XScale)
+YAccel = .25
+P2Facing = 1
+fall = 0
+air.fall = 1
+fall.recover = 0
+
+[State 200]
+Type = ChangeState
+Trigger1 = AnimTime = 0
+Trigger2 = movecontact = 1
+Trigger2 = time >=10
+Value = 2005

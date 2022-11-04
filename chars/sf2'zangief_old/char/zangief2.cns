@@ -1,0 +1,50 @@
+[Data]
+Life = 1000
+Attack = 100
+Defence = 100
+Fall.Defence_Up = 50
+Liedown.Time = 23
+AirJuggle = 10
+SparkNo = S51
+Guard.SparkNo = S52
+KO.Echo = 0
+Volume = 50
+IntPersistIndex = 4,5,7,9,10,11,12,13,30,60
+FloatPersistIndex = 40
+
+[Size]
+XScale = .88
+YScale = 1
+Ground.Front = 21
+Ground.Back = 17
+Air.Front = 21
+Air.Back = 17
+Height = 46
+Attack.Dist = 220
+Proj.Attack.Dist = 220
+Proj.DoScale = 0
+Head.Pos = 0, -100
+Mid.Pos = 0, -67
+ShadowOffset = 0
+Draw.Offset = 0, 0
+
+[Velocity]
+Walk.Fwd = 2.5
+Walk.Back = -1.5
+Run.Fwd = 0
+Run.Back = 0
+Jump.Neu = 0, -6
+Jump.Fwd = 2.5
+Jump.Back = -2.6
+RunJump.Fwd = 0
+RunJump.Back = 0
+AirJump.Neu = 0
+AirJump.Fwd = 0
+AirJump.Back = 0
+
+[Movement]
+AirJump.Num = 0
+AirJump.Height = 0
+YAccel = .28
+Stand.Friction = .89
+Crouch.Friction = .85

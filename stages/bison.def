@@ -1,0 +1,203 @@
+; Stage information :
+; -----------------
+; From the game: 	Street Fighter II - World Warriors
+; Name:			M.Bison's Stage (Thailand)
+; Version:		0.1
+
+; Original Information :	
+; Stage By:		Dark Saviour
+; From:			Win Kawaks 1.45
+; With:			MCM 1.5
+; Date:			03/12/2002
+; Email: 		darksaviour77@hotmail.com
+; Site:			http://www.ds-arena.fr.st
+
+; Super Jump Info :	
+; Additional Sprites:	Acey
+; Update Date:		05/11/2012
+; Email: 		admin@infinitymugenteam.com
+; Site:			http://www.infinitymugenteam.com
+
+;--------------------------------------------------------
+[Info]
+name = "(SF2) M.Bison"
+
+;--------------------------------------------------------
+[Camera]
+startx = 0
+starty = 0
+boundleft = -140
+boundright = 140
+boundhigh = -200
+boundlow = -10
+verticalfollow = 0
+floortension = 0
+tension = 60
+zoomin=1
+zoomout=.7
+;--------------------------------------------------------
+[PlayerInfo]
+p1startx = -80
+p1starty = 0
+p1startz = 0
+p1facing = 1
+p2startx = 80
+p2starty = 0
+p2startz = 0
+p2facing = -1
+leftbound = -1000
+rightbound = 1000
+topbound = 0
+botbound = 0
+
+;--------------------------------------------------------
+[Scaling]
+topz = 0       
+botz = 50      
+topscale = 1       
+botscale = 1.2     
+
+;--------------------------------------------------------
+[Bound]
+screenleft = 40
+screenright = 40
+
+;--------------------------------------------------------
+[StageInfo]
+zoffset = 216
+autoturn = 1
+resetBG = 0
+
+;--------------------------------------------------------
+[Shadow]
+;color = 128, 128, 128
+yscale = .15
+reflect = 0
+
+;--------------------------------------------------------
+[Music]
+bgmusic = sound/bison.mp3
+bgvolume = 255
+
+;--------------------------------------------------------
+[BGdef]
+spr = bison.sff
+debugbg = 0
+
+;--------------------------------------------------------
+;--------------------------------------------------------
+
+[BG Background]
+type = normal 
+spriteno = 0, 0
+start = 0, 48
+delta = .408482, 1
+
+[BG Ceiling]
+type = parallax
+spriteno = 1, 0
+start = 0, 0
+delta = 1.060267, 1	; extrapolation = 0
+xscale = 1, .633684
+;delta = 1.051339, 1	; extrapolation = 4
+;xscale = 1, .639065
+
+[BG Ground]
+type = parallax
+spriteno = 2, 0
+start = 0, 176
+;delta = .671875, 1	; extrapolation = 0
+;xscale = 1, 1.770764 
+;delta = .663783, 1	; extrapolation = -3.625
+;xscale = 1, 1.792349	
+;delta = .665178, 1	; extrapolation = -3
+;xscale = 1, 1.788590
+delta = .662946, 1	; extrapolation = -4
+xscale = 1, 1.794612
+
+[BG Crowd]
+type = normal
+spriteno = 3, 0
+start = 0, 0
+delta = .801339, 1
+mask = 1
+
+[BG Guy]
+type = anim
+actionno = 4
+start = -220, 161
+delta = .801339, 1
+
+[Begin Action 4]
+4,0, 0,0, 90
+4,1, 0,0, 11
+4,0, 0,0, 60
+4,1, 0,0, 12
+
+[BG Monk]
+type = anim
+actionno = 5
+start = -191, 135
+delta = .801339, 1
+
+[Begin Action 5]
+5,0, 0,0, 10
+5,1, 0,0, 12
+
+[BG Trio]
+type = anim
+actionno = 6
+start = -159, 134
+delta = .801339, 1
+
+[Begin Action 6]
+6,0, 0,0, 11
+6,1, 0,0, 12
+
+[BG Young&OldMen]
+type = anim
+actionno = 7
+start = 96, 126
+delta = .801339, 1
+
+[Begin Action 7]
+7,0, 0,0, 13
+7,1, 0,0, 10
+7,2, 0,0, 9
+
+[BG LeftStatue]
+type = normal
+spriteno = 8, 0
+start = -342, 21 ; 25
+delta = .964285, 1
+mask = 1
+
+[BG LeftStatue]
+type = normal
+spriteno = 8, 0
+start = 183, 21 ; 25
+delta = .964285, 1
+mask = 1
+
+
+; Notes:
+; - Parallax: ceiling
+; 	L1 = 795
+; 	L1+1 = 791
+; 	L2 = 621
+; - Parallax: ground
+; 	L1 = 621
+; 	L1+1 = 625
+; 	L2 = 853
+; - Left statue
+;	dist from edge = 34
+;	Y base = 216
+;	plane width = 768
+;	arranged Y base = 212
+;	arranged plane width = 752
+; - Right statue
+;	dist from edge = 193
+;	Y base = 216
+;	plane width = 768
+;	arranged Y base = 212
+;	arranged plane width = 752

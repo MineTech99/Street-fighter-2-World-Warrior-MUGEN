@@ -1,0 +1,280 @@
+; Stage information :
+; -----------------
+; From the game: 	Street Fighter II - World Warriors
+; Name:			Blanka's Stage (Brazil)
+; Version:		0.1
+
+; Original Information :	
+; Stage By:		Dark Saviour
+; From:			Win Kawaks 1.45
+; With:			MCM 1.5
+; Date:			03/12/2002
+; Email: 		darksaviour77@hotmail.com
+; Site:			http://www.ds-arena.fr.st
+
+; Super Jump Info :	
+; Additional Sprites:	Acey
+; Update Date:		05/11/2012
+; Email: 		admin@infinitymugenteam.com
+; Site:			http://www.infinitymugenteam.com
+
+;--------------------------------------------------------
+[Info]
+name = "(SF2) Blanka"
+
+;--------------------------------------------------------
+[Camera]
+startx = 0
+starty = 0
+boundleft = -120
+boundright = 120
+boundhigh = -200
+boundlow = -10
+verticalfollow = 0
+floortension = 0
+tension = 60
+zoomin=1
+zoomout=.7
+;--------------------------------------------------------
+[PlayerInfo]
+p1startx = -80
+p1starty = 0
+p1startz = 0
+p1facing = 1
+p2startx = 80
+p2starty = 0
+p2startz = 0
+p2facing = -1
+leftbound = -1000
+rightbound = 1000
+topbound = 0
+botbound = 0
+
+;--------------------------------------------------------
+[Scaling]
+topz = 0       
+botz = 50      
+topscale = 1       
+botscale = 1.2     
+
+;--------------------------------------------------------
+[Bound]
+screenleft = 40
+screenright = 40
+
+;--------------------------------------------------------
+[StageInfo]
+zoffset = 216
+autoturn = 1
+resetBG = 0
+
+;--------------------------------------------------------
+[Shadow]
+;color = 128, 128, 128
+yscale = -.1
+reflect = 0
+
+;--------------------------------------------------------
+[Music]
+bgmusic = sound/blanka.mp3
+bgvolume = 255
+
+;--------------------------------------------------------
+[BGdef]
+spr = blanka.sff
+debugbg = 0
+
+;--------------------------------------------------------
+;--------------------------------------------------------
+
+[BG Background]
+type  = normal
+spriteno = 0, 0
+start = -160, 0
+delta = 0, 1
+tile = 1, 0
+tilespacing = 0, 0
+velocity = -.25, 0
+mask = 0
+
+[BG House]
+type  = normal
+spriteno = 1, 0
+start = 0, 0
+delta =  .669642, 1
+mask = 1
+
+[BG Ground]
+type  = parallax
+spriteno = 2, 0
+start = 0, 192
+delta = .803571, 1
+xscale = 1, 1.48334
+mask = 0
+
+[BG Tree&Crowd]
+type  = normal
+spriteno = 3, 0
+start = 0, 0
+delta = .803571, 1
+mask = 1
+
+[BG LeftBackStake]
+type  = normal
+spriteno = 4, 0
+start = -120, 165
+delta = .803571, 1
+mask = 1
+
+[BG RightBackStake]
+type  = normal
+spriteno = 4, 0
+start = 64, 165
+delta = .803571, 1
+mask = 1
+
+[BG LeftFrontStake]
+type  = normal
+spriteno = 4, 0
+start = -278, 213
+delta = 1.223214, 1
+mask = 1
+layerno=1
+
+[BG RightFrontStake]
+type  = normal
+spriteno = 4, 0
+start = 295, 213
+delta = 1.223214, 1
+mask = 1
+layerno=1
+
+[BG LeftWindow]
+type  = anim
+actionno = 0
+start = -259, 110
+delta =  .669642, 1
+mask = 1
+
+[BG RightWindow]
+type  = anim
+actionno = 1
+start = -107, 106
+delta =  .669642, 1
+mask = 1
+
+[BG ManWithFish]
+type  = anim
+actionno = 2
+start = -92, 130
+delta = .803571, 1
+mask = 1
+
+[BG Couple]
+type  = anim
+actionno = 3
+start = 100, 129
+delta = .803571, 1
+mask = 1
+
+[BG Photograph]
+type  = anim
+actionno = 4
+start = 160, 146
+delta = .803571, 1
+mask = 1
+
+[BG HalfNakedMan]
+type  = anim
+actionno = 5
+start = 197, 128
+delta = .803571, 1
+mask = 1
+
+[BG Father]
+type  = anim
+actionno = 6
+start = 225, 131
+delta = .803571, 1
+mask = 1
+
+[BG LittleBoy]
+type  = anim
+actionno = 7
+start = 237, 160
+delta = .803571, 1
+mask = 1
+
+[BG LittleGirl]
+type  = anim
+actionno = 8
+start = 257, 149
+delta = .803571, 1
+mask = 1
+
+;--------------------------------------------------------
+[Begin Action 0] ; Left Window
+5,0, 0,0, 63
+5,1, 0,0, 10
+5,0, 0,0, 10
+5,1, 0,0, 10
+5,0, 0,0, 10
+5,1, 0,0, 10
+5,0, 0,0, 57
+
+[Begin Action 1] ; Right Window
+6,0, 0,0, 80
+6,1, 0,0, 10
+6,0, 0,0, 10
+6,1, 0,0, 10
+6,0, 0,0, 10
+6,1, 0,0, 10
+
+[Begin Action 2] ; Man with Fish
+7,0, 0,0, 31
+7,1, 0,0, 12
+7,2, 0,0, 12
+7,1, 0,0, 12
+7,0, 0,0, 12
+7,1, 0,0, 12
+7,2, 0,0, 12
+7,1, 0,0, 12
+7,0, 0,0, 61
+
+[Begin Action 3] ; Couple
+8,0, 0,0, 43
+8,1, 0,0, 12
+8,0, 0,0, 97
+
+[Begin Action 4] ; Photograph
+9,0, 0,0, 13
+9,1, 0,0, 12
+9,2, 0,0, 12
+9,0, 0,0, 27
+
+[Begin Action 5] ; Half Nude Man
+10,0, 0,0, 92
+10,1, 0,0, 12
+
+[Begin Action 6] ; Father
+11,0, 0,0, 11
+11,1, 0,0, 12
+11,0, 0,0, 12
+11,2, 0,0, 12
+11,0, 0,0, 60
+
+[Begin Action 7] ; Little Boy
+12,0, 0,0, 80
+12,1, 0,0, 12
+12,2, 0,0, 12
+12,1, 0,0, 12
+
+[Begin Action 8] ; Little Girl
+13,0, 0,0, 75
+13,1, 0,0, 12
+13,0, 0,0, 12
+13,2, 0,0, 12
+13,0, 0,0, 32
+13,1, 0,0, 12
+13,0, 0,0, 12
+13,2, 0,0, 12

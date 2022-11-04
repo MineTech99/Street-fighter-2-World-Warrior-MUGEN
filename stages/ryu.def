@@ -1,0 +1,304 @@
+; Stage information :
+; -----------------
+; From the game: 	Street Fighter II - World Warriors
+; Name:			Suzaku Castle (Japan)
+; Version:		0.2
+
+; Original Information :	
+; Stage By:		Dark Saviour
+; From:			Win Kawaks 1.45
+; With:			MCM 1.5
+; Date:			03/12/2002
+; Email: 		darksaviour77@hotmail.com
+; Site:			http://www.ds-arena.fr.st
+
+; Super Jump Info :	
+; Additional Sprites:	Acey
+; Update Date:		05/11/2012
+; Email: 		admin@infinitymugenteam.com
+; Site:			http://www.infinitymugenteam.com
+
+;--------------------------------------------------------
+[Info]
+name = "(SF2) Ryu"
+
+;--------------------------------------------------------
+[Camera]
+startx = 0
+starty = 0
+boundleft = -120
+boundright = 120
+boundhigh = -200
+boundlow = -10
+verticalfollow = 0
+floortension = 0
+tension = 60
+zoomin=1
+zoomout=.7
+;--------------------------------------------------------
+[PlayerInfo]
+p1startx = -80
+p1starty = 0
+p1startz = 0
+p1facing = 1
+p2startx = 80
+p2starty = 0
+p2startz = 0
+p2facing = -1
+leftbound = -1000
+rightbound = 1000
+topbound = 0
+botbound = 0
+
+;--------------------------------------------------------
+[Scaling]
+topz = 0       
+botz = 50      
+topscale = 1       
+botscale = 1.2     
+
+;--------------------------------------------------------
+[Bound]
+screenleft = 40
+screenright = 40
+
+;--------------------------------------------------------
+[StageInfo]
+zoffset = 216
+autoturn = 1
+resetBG = 0
+
+;--------------------------------------------------------
+[Shadow]
+;color = 128, 128, 128
+yscale = .1
+reflect = 0
+
+;--------------------------------------------------------
+[Music]
+bgmusic = sound/ryu.mp3
+bgvolume = 255
+
+;--------------------------------------------------------
+[BGdef]
+spr = ryu.sff
+debugbg = 0
+
+;--------------------------------------------------------
+;--------------------------------------------------------
+
+[BG 0a]
+type = normal 
+spriteno = 0, 1
+start = -160, 0
+delta = 0, 1
+tile = 1, 0
+tilespacing = 0, 0
+velocity = -.25, 0
+
+[BG 0b]
+type  = normal 
+spriteno = 0, 0
+start = -160, 0
+delta = 0, 1
+velocity = -.25, 0
+
+[BG 1]
+type  = normal
+spriteno = 1, 0
+start = -27, 56
+delta = .470982, 1
+mask = 1
+
+[BG 2]
+type  = normal
+spriteno = 2, 0
+start = -1, 6
+delta = .537946, 1
+mask = 1
+
+[BG 3]
+type  = normal
+spriteno = 3, 0
+start = 0, 0
+delta = .671875, 1
+mask = 1
+
+[BG 4a]
+type  = parallax
+spriteno = 4, 0
+start = 0, 192
+delta = .792410, 1
+xscale = 1, 1.377466
+
+[BG 4b]
+type  = normal
+spriteno = 4, 1
+start = 0, 228
+delta = 1.102678, 1
+
+[BG 5]
+type  = anim
+actionno = 5
+id = 51
+start = 111, 48
+delta = .470982, 1
+
+[BG 5']
+type  = anim
+actionno = 5
+id = 52
+start = 47, 65
+delta = .470982, 1
+
+[BG 5'']
+type  = anim
+actionno = 5
+id = 53
+start = -32, 49
+delta = .470982, 1
+
+[Begin Action 5]
+5,0, 0,0, 4
+5,0, 0,1, 4
+5,0, 0,2, 4
+5,0, 0,3, 4
+5,0, 0,4, 4
+5,0, 0,5, 4
+5,0, 0,6, 4
+5,0, 0,7, 2
+-1,0, 0,0, 2
+5,1, 0,8, 2
+5,1, 0,9, 2
+5,1, 0,10, 2
+5,1, 0,11, 2
+5,1, 0,12, 2
+5,1, 0,13, 2
+5,1, 0,14, 2
+-1,0, 0,0, 2
+5,2, 0,15, 2
+5,2, 0,18, 2
+5,2, 0,19, 2
+5,3, 0,20, 2
+5,3, 0,22, 2
+5,2, 0,26, 2
+5,2, 0,28, 2
+5,2, 0,30, 2
+5,4, 0,33, 2
+5,4, 0,35, 2
+5,4, 0,37, 2
+5,4, 0,38, 2
+5,5, 0,37, 6
+5,6, 0,35, 10
+5,5, 0,37, 6
+5,7, 0,38, 10
+5,5, 0,37, 6
+5,6, 0,35, 8
+5,5, 0,37, 8
+5,7, 0,38, 8
+5,5, 0,37, 10
+5,6, 0,35, 6
+5,5, 0,37, 8
+5,7, 0,38, 8
+5,5, 0,37, 8
+5,6, 0,35, 8
+5,5, 0,37, 8
+5,7, 0,38, 8
+5,2, 0,35, 2
+5,2, 0,34, 2
+5,3, 0,30, 2
+5,3, 0,28, 2
+5,3, 0,26, 2
+5,2, 0,25, 2
+5,2, 0,23, 2
+-1,0, 0,0, 2
+5,1, 0,21, 2
+5,1, 0,18, 2
+5,1, 0,19, 2
+-1,0, 0,0, 2
+5,0, 0,15, 2
+5,0, 0,14, 2
+5,0, 0,13, 2
+5,0, 0,12, 2
+5,0, 0,11, 2
+5,0, 0,10, 2
+
+;--
+[BGCtrlDef 5]
+looptime = 3232
+CtrlID = 51
+
+[BGCtrl 5.1]
+type = Enable
+time = 0
+value = 0
+
+[BGCtrl 5.2]
+type = Enable
+time = 900
+value = 1
+
+[BGCtrl 5.3]
+type = Enable
+time = 1134
+value = 0
+
+
+[BGCtrlDef 5']
+looptime = 3232
+CtrlID = 52
+
+[BGCtrl 5.1']
+type = Enable
+time = 0
+value = 0
+
+[BGCtrl 5.2']
+type = Enable
+time = 2998
+value = 1
+
+[BGCtrl 5.3']
+type = Enable
+time = 3232
+value = 0
+
+
+[BGCtrlDef 5'']
+looptime = 3232
+CtrlID = 3
+
+[BGCtrl 5.1'']
+type = Enable
+time = 0
+value = 0
+
+[BGCtrl 5.2'']
+type = Enable
+time = 1734
+value = 1
+
+[BGCtrl 5.3'']
+type = Enable
+time = 1968
+value = 0
+
+[BG 6]	; Left Panel
+;type  = dummy		; Uncomment/comment out this line to hide/show this object
+type  = normal		; Comment/uncomment out this line to hide/show this object
+spriteno = 6, 0
+;start = -288, 117	; Uncomment/comment out this line #1 to disable/enable the arranged values
+;delta = 1, 1		; Uncomment/comment out this line #2 to disable/enable the arranged values
+start = -288, 102	; Comment/uncomment out this line #1 to enable/disable the original values
+delta = .877232, 1	; Comment/uncomment out this line #2 to enable/disable the original values
+mask = 1
+
+[BG 6'] ; Right Panel
+;type  = dummy		; Uncomment/comment out this line to hide/show this object
+type  = normal		; Comment/uncomment out this line to hide/show this object
+spriteno = 6, 0
+;start = 256, 117	; Uncomment/comment out this line #1 to disable/enable the arranged values
+;delta = 1, 1		; Uncomment/comment out this line #2 to disable/enable the arranged values
+start = 256, 102	; Comment/uncomment out this line #1 to enable/disable the original values
+delta = .877232, 1	; Comment/uncomment out this line #2 to enable/disable the original values
+mask = 1

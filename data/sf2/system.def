@@ -1,0 +1,476 @@
+﻿
+;-------------------------------------------------------------------
+;-------------------------------------------------------------------
+[Info]
+name         = "Street Fighter 2"
+versiondate  = 01,12,2014
+mugenversion = 1.1
+localcoord   = 320,240
+
+;-------------------------------------------------------------------
+;-------------------------------------------------------------------
+[Files]
+spr              = sf2.sff
+snd              = data/sf2/sound/system.snd
+logo.storyboard  = data/sf2/sf2logo.def
+intro.storyboard = data/sf2/storyboard/opening.def
+select           = select.def
+fight            = fight.def
+font1            = data/sf2/font/sf2_small.fnt
+font2            = data/sf2/font/sf2_middle.fnt
+font3            = data/sf2/font/sf2_font.fnt
+font4            = mssansserif-tt36.def
+font4.height     = 12
+
+[ja.Files]
+spr              = sf2.sff
+snd              = data/sf2/sound/system.snd
+logo.storyboard  =
+intro.storyboard = data/sf2/storyboard/opening.def
+select           = select.def
+fight            = fight_480p.def
+font1            = data/sf2/font/sf2_small.fnt
+font2            = data/sf2/font/sf2_middle.fnt
+font3            = data/sf2/font/sf2_font.fnt
+font4            = msgothic-tt36.def
+font4.height     = 12
+
+;----------------------------
+[Music]
+title.bgm        = data/sf2/sound/sf2_select.mp3
+title.bgm.loop   = 1
+select.bgm       = data/sf2/sound/sf2_select.mp3
+select.bgm.loop  = 1
+vs.bgm           = data/sf2/sound/sf2_vs.mp3
+vs.bgm.loop      = 0
+victory.bgm      = data/sf2/sound/sf2_win.mp3
+victory.bgm.loop = 0
+
+;-------------------------------------------------------------------
+[Title Info]
+fadein.time                = 15
+fadeout.time               = 15
+menu.pos                   = 160,186
+menu.item.font             = 2,1,0
+menu.item.active.font      = 2,0,0,224,240,240
+menu.item.spacing          = 0,54
+menu.itemname.arcade       = "ARCADE"
+menu.itemname.versus       = "VS MODE"
+menu.itemname.teamarcade   = "TEAM ARCADE"
+menu.itemname.teamversus   = "TEAM VS"
+menu.itemname.teamcoop     = "TEAM CO-OP"
+menu.itemname.survival     = "SURVIVAL"
+menu.itemname.survivalcoop = "SURVIVAL CO-OP"
+menu.itemname.training     = "TRAINING"
+menu.itemname.watch        = "WATCH"
+menu.itemname.options      = "OPTIONS"
+menu.itemname.exit         = "EXIT"
+menu.window.margins.y      = 12,8
+menu.window.visibleitems   = 1
+menu.boxcursor.visible     = 0
+menu.boxcursor.coords      = -48,-10,47,2
+cursor.move.snd            = 100,0
+cursor.done.snd            = 100,1
+cancel.snd                 = 100,2
+
+;-------------------------------------------------------------------
+[TitleBGdef]
+bgclearcolor = 0,0,0
+
+[TitleBG 0]
+type     = normal
+spriteno = 0,0
+layerno  = 0
+start    = 0,0
+tile     = 1,1
+
+[TitleBG Title]
+type     = normal
+spriteno = 0,6
+layerno  = 0
+start    = 0,40
+tile     = 0,0
+mask     = 1
+
+[TitleBG Sub Title]
+type     = normal
+spriteno = 0,8
+layerno  = 0
+start    = 0,155
+tile     = 0,0
+mask     = 1
+
+[TitleBG Copyright]
+type     = normal
+spriteno = 0,10
+layerno  = 0
+start    = 0,200
+tile     = 0,0
+mask     = 1
+
+;-------------------------------------------------------------------
+;-------------------------------------------------------------------
+[Select Info]
+fadein.time                         = 10
+fadeout.time                        = 10
+rows                                = 5
+columns                             = 6
+wrapping                            = 1
+pos                                 = 120,190
+showemptyboxes                      = 0
+moveoveremptyboxes                  = 0
+
+cell.size                           = 13,13
+cell.spacing                        = 0
+cell.bg.spr                         = 1,2
+cell.random.spr                     = 1,3
+cell.random.switchtime              = 0
+
+cell.bg.scale                       = 0.5,0.5
+cell.random.scale                   = 0.5,0.5
+
+p1.cursor.startcell                 = 1,0
+p1.cursor.active.anim               = 160
+p1.cursor.done.spr                  = 1,5
+p1.cursor.move.snd                  = 100,0
+p1.cursor.done.snd                  = 100,1
+p1.random.move.snd                  = 100,0
+p1.cursor.active.scale              = 0.5,0.5
+p1.cursor.done.scale                = 0.5,0.5
+
+p2.cursor.startcell                 = 1,14
+p2.cursor.active.anim               = 170
+p2.cursor.done.spr                  = 1,7
+p2.cursor.blink                     = 0
+p2.cursor.move.snd                  = 100,0
+p2.cursor.done.snd                  = 100,1
+p2.random.move.snd                  = 100,0
+p2.cursor.active.scale              = 0.5,0.5
+p2.cursor.done.scale                = 0.5,0.5
+
+random.move.snd.cancel              = 1
+stage.move.snd                      = 100,0
+stage.done.snd                      = 100,1
+cancel.snd                          = 100,2
+
+portrait.spr                        = 9000,0
+portrait.offset                     = 0,0
+portrait.scale                      = 0.5,0.5
+
+title.offset                        = 160,-10
+title.font                          = 1,0,0
+
+p1.face.spr                         = 9000,1
+p1.face.offset                      = 0,160
+p1.face.scale                       = 0.5,0.5
+p1.face.facing                      = 1
+p1.face.window                      = 0,160,59,229
+
+p2.face.spr                         = 9000,1
+p2.face.offset                      = 319,160
+p2.face.scale                       = 0.5,0.5
+p2.face.facing                      = -1
+p2.face.window                      = 259,160,319,229
+
+p1.name.offset                      = 0,154
+p1.name.font                        = 2,4,1
+p1.name.spacing                     = 0,10
+
+p2.name.offset                      = 319,154
+p2.name.font                        = 2,4,-1
+p2.name.spacing                     = 0,10
+
+stage.pos                           = 160,154
+stage.active.font                   = 2,1,0
+stage.active2.font                  = 2,2
+stage.done.font                     = 2,0
+
+teammenu.move.wrapping              = 1
+
+p1.teammenu.pos                     = 0,173
+;p1.teammenu.bg.spr =
+p1.teammenu.selftitle.font          = 2,0,1
+p1.teammenu.selftitle.text          = "1P TEAM"
+p1.teammenu.enemytitle.font         = 2,0,1
+p1.teammenu.enemytitle.text         = "TEAM MODE"
+p1.teammenu.move.snd                = 100,0
+p1.teammenu.value.snd               = 100,0
+p1.teammenu.done.snd                = 100,1
+p1.teammenu.item.offset             = 0,15
+p1.teammenu.item.spacing            = 0,10
+p1.teammenu.item.font               = 1,0,1
+p1.teammenu.item.active.font        = 1,1,1
+p1.teammenu.item.active2.font       = 1,0,1,224,224,240
+;p1.teammenu.item.cursor.offset      = -30,0
+;p1.teammenu.item.cursor.anim        = 180
+p1.teammenu.value.icon.offset       = 30,-1
+p1.teammenu.value.icon.spr          = 1,12
+p1.teammenu.value.empty.icon.offset = 30,-1
+p1.teammenu.value.empty.icon.spr    = 1,13
+p1.teammenu.value.spacing           = 8,0
+
+p2.teammenu.pos                     = 319,173
+;p2.teammenu.bg.spr =
+p2.teammenu.selftitle.font          = 2,0,-1
+p2.teammenu.selftitle.text          = "2P TEAM"
+p2.teammenu.enemytitle.font         = 2,0,-1
+p2.teammenu.enemytitle.text         = "TEAM MODE"
+p2.teammenu.move.snd                = 100,0
+p2.teammenu.value.snd               = 100,0
+p2.teammenu.done.snd                = 100,1
+p2.teammenu.item.offset             = 0,15
+p2.teammenu.item.spacing            = 0,10
+p2.teammenu.item.font               = 1,0,-1
+p2.teammenu.item.active.font        = 1,1,-1
+p2.teammenu.item.active2.font       = 1,0,-1,224,224,240
+;p2.teammenu.item.cursor.offset      = 30,0
+;p2.teammenu.item.cursor.anim        = 190
+p2.teammenu.value.icon.offset       = -30,-1
+p2.teammenu.value.icon.spr          = 1,14
+p2.teammenu.value.empty.icon.offset = -30,-1
+p2.teammenu.value.empty.icon.spr    = 1,15
+p2.teammenu.value.spacing           = -8,0
+
+;sysexplod0.text =
+;sysexplod0.font =
+
+;-------------------------------------------------------------------
+[Begin Action 160];P1 active cursor
+1,4,0,0,2
+1,5,0,0,2
+
+[Begin Action 170];P2 active cursor
+1,6,0,0,2
+1,7,0,0,2
+
+;[Begin Action 180];P1 Team mode cursor
+
+;[Begin Action 190];P2 Team mode cursor
+
+;-------------------------------------------------------------------
+[SelectBGdef]
+;spr = graphics/selectbg.sff
+
+[SelectBG 0]
+type     = normal
+spriteno = 0,1
+layerno  = 0
+start    = 0,0
+tile     = 1,1
+
+[SelectBG World]
+type     = normal
+spriteno = 1,0
+layerno  = 0
+start    = -10,25
+mask     = 1
+
+[SelectBG 1P]
+type     = normal
+spriteno = 1,8
+layerno  = 1
+start    = -140,143
+mask     = 1
+
+[SelectBG 2P]
+type     = normal
+spriteno = 1,9
+layerno  = 1
+start    = 136,143
+mask     = 1
+
+[SelectBG Word]
+type     = normal
+spriteno = 1,1
+layerno  = 1
+start    = 0,6
+mask     = 1
+
+;-------------------------------------------------------------------
+;-------------------------------------------------------------------
+[VS Screen]
+time            = 300
+fadein.time     = 10
+fadeout.time    = 15
+
+match.text      = "MATCH %i"
+match.offset    = 158,14
+match.font      = 3,0,0
+
+p1.spr          = 9000,1
+p1.offset       = 5,20
+p1.facing       = 1
+p1.scale        = 1,1
+p1.window       = 5,20,124,159
+
+p2.spr          = 9000,1
+p2.offset       = 314,20
+p2.facing       = -1
+p2.scale        = 1,1
+p2.window       = 194,20,314,159
+
+p1.name.offset  = 0,0
+p1.name.font    = 2,4,1
+p1.name.spacing = 0,12
+
+p2.name.offset  = 0,0
+p2.name.font    = 2,4,-1
+p2.name.spacing = 0,12
+
+;-------------------------------------------------------------------
+[VersusBGdef] 
+
+[VersusBG BG] 
+type     = normal
+spriteno = 1,10
+start    = 0,0
+tile     = 1,1
+
+[VersusBG VS] 
+type     = normal
+spriteno = 1,11
+layerno  = 1
+start    = 0,170
+tile     = 0,0
+mask     = 1
+
+;-------------------------------------------------------------------
+;-------------------------------------------------------------------
+[Demo Mode]
+enabled            = 1
+select.enabled     = 0
+vsscreen.enabled   = 0
+title.waittime     = 700
+fight.endtime      = 1000
+fight.playbgm      = 1
+fight.bars.display = 1
+intro.waitcycles   = 0
+debuginfo          = 0
+
+;-------------------------------------------------------------------
+[Continue Screen]
+enabled           = 1
+pos               = 160,20
+
+continue.text     = "CONTINUE?"
+continue.font     = 2,2,0
+continue.offset   = 0,0
+
+yes.text          = "YES"
+yes.font          = 2,1,0,128,128,128
+yes.offset        = -40,20
+yes.active.text   = "YES"
+yes.active.font   = 2,0,0
+yes.active.offset = -40,20
+
+no.text           = "NO"
+no.font           = 2,1,0,128,128,128
+no.offset         = 40,20
+no.active.text    = "NO"
+no.active.font    = 2,0,0
+no.active.offset  = 40,20
+
+;-------------------------------------------------------------------
+[Game Over Screen]
+enabled    = 1
+storyboard = storyboard/gameover.def
+
+;-------------------------------------------------------------------
+;-------------------------------------------------------------------
+[Victory Screen]
+enabled = 1
+time              = 320
+fadein.time       = 10
+fadeout.time      = 15
+
+p1.offset         = 100,0;100,-10
+p1.spr            = 9000,2
+p1.facing         = 1
+p1.scale          = 1,1
+p1.window         = 0,0,319,169
+
+p1.name.offset    = 10,182
+p1.name.font      = 3,0,1
+
+winquote.text     = "Winner! Please put the word."
+winquote.offset   = 10,195
+winquote.font     = 4,0,1
+winquote.window   = 0,170,319,239
+winquote.textwrap = w
+
+;-------------------------------------------------------------------
+[VictoryBGdef] 
+
+[VictoryBG 1] 
+type     = normal
+spriteno = 0,0
+start    = 0,0
+tile     = 1,1
+
+;-------------------------------------------------------------------
+;-------------------------------------------------------------------
+[Win Screen]
+enabled             = 1
+
+wintext.text        = "CONGRATULATIONS"
+wintext.font        = 3,0,0
+wintext.offset      = 159,50
+wintext.displaytime = -1
+wintext.layerno     = 2
+wintext.scale       = 0.5,0.5
+
+fadein.time         = 32
+pose.time           = 300
+fadeout.time        = 64
+
+;-------------------------------------------------------------------
+;-------------------------------------------------------------------
+[Default Ending]
+enabled    = 1
+storyboard = storyboard/gameover.def
+
+;-------------------------------------------------------------------
+[End Credits]
+enabled    = 1
+storyboard = storyboard/gameover.def
+
+;-------------------------------------------------------------------
+[Survival Results Screen]
+enabled = 1
+winstext.text        = "Rounds Survived : %i"
+winstext.font        = 2,0,0
+winstext.offset      = 159,40
+winstext.displaytime = -1
+winstext.layerno     = 2
+fadein.time          = 32
+show.time            = 300
+fadeout.time         = 64
+roundstowin          = 5
+
+;-------------------------------------------------------------------
+;-------------------------------------------------------------------
+[Option Info]
+cursor.move.snd = 100,0
+cursor.done.snd = 100,1
+cancel.snd      = 100,2
+
+[OptionBGdef] 
+[OptionBG 1]
+type     = normal
+spriteno = 0,0
+start    = 0,0
+tile     = 1,1
+
+[OptionBG Title]
+type     = normal
+spriteno = 4,2
+layerno  = 0
+start    = 0,120
+tile     = 0,0
+mask     = 1
+
+;-------------------------------------------------------------------
+;-------------------------------------------------------------------
+;-------------------------------------------------------------------
+;-------------------------------------------------------------------
+;-------------------------------------------------------------------

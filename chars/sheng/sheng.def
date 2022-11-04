@@ -1,0 +1,33 @@
+; Definition file for Sheng Long/Gouken whatever
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name = "Sheng Long by Cipher44"        ;Name of character
+displayname = "Sheng Long" ;Name of character to display
+versiondate = 4,14,2001    ;Version date of character
+mugenversion = 4,14,2001   ;Version of M.U.G.E.N character works on
+author = "Cipher44"         ;Character author name
+pal.defaults = 1,2      ;Default palettes in order of preference
+; Email: ninfan45@hotmail.com
+
+; Files for the player
+[Files]
+cmd     = gouken.cmd   ;Command set
+cns     = gouken.cns   ;Constants
+st      = gouken.cns   ;States
+st1     = specials.st  ; Special moves
+st2     = supers.st  ; Super moves
+stcommon = common1.cns ;Common states
+sprite  = gouken.sff   ;Sprite
+anim    = gouken.air   ;Animation
+sound   = gouken.snd ; Sound
+pal1    = gouken2.act  ; Basic outfit
+pal2    = gouken1.act  
+pal3    = gouken3.act  
+pal4    = gouken4.act  
+pal5    = gouken5.act  
+pal6    = gouken6.act  
+pal7    = shingouken1.act  
+pal8    = shingouken2.act
+pal9    = shingouken3.act

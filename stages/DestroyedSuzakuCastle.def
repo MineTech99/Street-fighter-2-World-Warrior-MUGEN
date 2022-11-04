@@ -1,0 +1,332 @@
+;YouTube Channel: https://www.youtube.com/channel/UCkwbibnjwAFnQITFDALGcHg
+
+[Info]
+Name = "Destroyed Suzaku Castle"
+Author = "Frank Berserk"
+Base = "DM-Suzaku Castle por DooM"
+
+[Camera]
+startx = 0
+starty = 0
+boundleft = -240
+boundright = 240
+boundhigh = -19
+boundlow = 0
+verticalfollow = .2
+tension = 60
+floortension = 1
+
+[PlayerInfo]
+p1startx = -70
+p1starty = 0
+p1startz = 0
+p1facing = 1
+p2startx = 70
+p2starty = 0
+p2startz = 0
+p2facing = -1
+leftbound  = -1000
+rightbound =  1000
+topbound  =  0
+botbound  =  0
+
+[Scaling]
+topz     = 0
+botz     = 50
+topscale = 1
+botscale = 1.2
+
+[Bound]
+screenleft = 15
+screenright = 15
+
+[StageInfo]
+zoffset = 216
+autoturn = 1
+resetBG = 1
+hires = 1
+
+[Shadow]
+intensity = 512
+color = 0,0,0
+yscale = -0.150
+fade.range = -100,150
+
+[Reflection]
+intensity = 0
+
+[Music]
+bgmusic = 
+bgvolume = 255 
+bgm.loop = 1
+
+[BGdef]
+spr = stages/scastle.sff
+debugbg = 0
+
+[BG F11]
+type = anim
+actionno = 1
+start = -100,230
+delta = .4,.4
+mask = 0
+layerno = 0
+[BG NN]
+type = normal
+spriteno = 5,0
+layerno = 0
+start = 0,-2
+mask = 1
+trans=add
+delta = .4,.4
+[BG CY]
+type = normal
+spriteno = 99,2
+start = 0,0
+delta = .4,.4
+trans = add
+velocity = -.5,0
+tile = 1,0
+[BG ZK]
+type = normal
+spriteno = 4,0
+layerno = 0
+start = 0,229
+mask = 1
+delta = .5,.5
+[BG 8]
+type  = normal
+spriteno = 11, 25
+start = -462, 0
+trans = add
+layerno = 1
+delta = 2, 2
+mask = 1
+velocity = -1, 0
+tile = 1, 0
+tilespacing = 0, 0
+trans = add
+[BG RR]
+type = Normal
+spriteno = 5,1
+start = 0,100
+delta = 2,1
+Layerno = 1
+mask = 1
+trans = addalpha
+alpha = 200,256
+tile = 1,1
+velocity = 0,15
+[BG LS]
+type = anim
+layerno = 0
+actionno = 34
+start =  -500, -60 ;
+;delta = .6,.6
+trans = None
+mask = 0
+[BG MK]
+type = normal
+spriteno = 2,0
+layerno = 0
+start = 0,385
+mask = 0
+delta = 1.5,1.3
+[BG NE] 
+Type     = Normal
+spriteno = 99,0
+layerno  = 0
+Start    = 160,385
+Delta    = 1.7,1.3
+Mask     = 0
+trans    = sub
+[BG FF]
+type = anim
+layerno = 0
+actionno = 200
+start =  -350, 220 
+delta = 1.5,1.3
+trans = add
+mask = 0
+[BG TM]
+type = normal
+spriteno = 1,1
+layerno = 0
+start = -710,-25
+mask = 1
+delta = 1.6,1.3
+[BG TM2]
+type = normal
+spriteno = 1,0
+layerno = 0
+start = -320,385
+mask = 1
+delta = 1.7,1.3
+[BG DC]
+type = normal
+spriteno = 1,2
+layerno = 0
+start = 598,385
+mask = 1
+delta = 1.7,1.3
+[BG PD]
+type = parallax
+spriteno = 0,0
+layerno = 0
+start = 0,480
+mask = 1
+delta = 1.7, 2
+xscale=2,2.52941176470588   
+yscalestart = 100
+yscaledelta = .65
+[BG PD]
+type = normal
+spriteno = 0,1
+layerno = 0
+start = 0,480
+mask = 1
+delta = 2.15,1.8
+[BG C2]
+Type= normal
+spriteno = 99,1
+layerno  = 0
+Start    = 0,479
+delta = .8, 1.3
+trans = sub
+
+[Begin Action 1]
+100,1, 0,0, 1;, ,A
+100,0, 0,0, 1;, ,A
+100,3, 0,0, 1;, ,A
+100,4, 0,0, 1;, ,A
+100,5, 0,0, 1;, ,A
+100,6, 0,0, 1;, ,A
+100,1, 0,0, 1;, ,A
+100,0, 0,0, 1;, ,A
+100,3, 0,0, 1;, ,A
+100,4, 0,0, 1;, ,A
+100,5, 0,0, 1;, ,A
+100,6, 0,0, 1;, ,A
+100,2, 0,0, 200;, ,A
+100,1, 0,0, 1;, ,A
+100,0, 0,0, 1;, ,A
+100,3, 0,0, 1;, ,A
+100,4, 0,0, 1;, ,A
+100,5, 0,0, 1;, ,A
+100,6, 0,0, 1;, ,A
+100,1, 0,0, 1;, ,A
+100,0, 0,0, 1;, ,A
+100,3, 0,0, 1;, ,A
+100,4, 0,0, 1;, ,A
+100,5, 0,0, 1;, ,A
+100,6, 0,0, 1;, ,A
+100,2, 0,0, 30;, ,A
+100,1, 0,0, 1;, ,A
+100,0, 0,0, 1;, ,A
+100,3, 0,0, 1;, ,A
+100,4, 0,0, 1;, ,A
+100,5, 0,0, 1;, ,A
+100,6, 0,0, 1;, ,A
+100,1, 0,0, 1;, ,A
+100,0, 0,0, 1;, ,A
+100,3, 0,0, 1;, ,A
+100,4, 0,0, 1;, ,A
+100,5, 0,0, 1;, ,A
+100,6, 0,0, 1;, ,A
+[Begin Action 34]
+11,10, 0,0, 1 ,,A
+11,11, 0,0, 1 ,,A
+11,12, 0,0, 1 ,,A
+11,13, 0,0, 1 ,,A
+11,14, 0,0, 1 ,,A
+11,15, 0,0, 1 ,,A
+11,16, 0,0, 1 ,,A
+11,17, 0,0, 1 ,,A
+11,18, 0,0, 1 ,,A
+11,19, 0,0, 1 ,,A
+11,20, 0,0, 1 ,,A
+11,10, 0,0, 1 ,,A
+11,11, 0,0, 1 ,,A
+11,12, 0,0, 1 ,,A
+11,13, 0,0, 1 ,,A
+11,14, 0,0, 1 ,,A
+11,15, 0,0, 1 ,,A
+11,16, 0,0, 1 ,,A
+11,17, 0,0, 1 ,,A
+11,18, 0,0, 1 ,,A
+11,19, 0,0, 1 ,,A
+11,20, 0,0, 1 ,,A
+11,21, 0,0, 1 ,,A
+11,22, 0,0, 1 ,,A
+11,23, 0,0, 1 ,,A
+11,24, 0,0, 1 ,,A
+11,25, 0,0, 1 ,,A
+11,26, 0,0, 1 ,,A
+11,26, 100000,0, 30 ,,A
+11,0, 0,0, 1 ,,A
+11,1, 0,0, 1 ,,A
+11,2, 0,0, 1 ,,A
+11,3, 0,0, 1 ,,A
+11,4, 0,0, 1 ,,A
+11,5, 0,0, 1 ,,A
+11,6, 0,0, 1 ,,A
+11,7, 0,0, 1 ,,A
+11,8, 0,0, 1 ,,A
+11,9, 0,0, 1 ,,A
+11,10, 0,0, 1 ,,A
+11,11, 0,0, 1 ,,A
+11,12, 0,0, 1 ,,A
+11,13, 0,0, 1 ,,A
+11,14, 0,0, 1 ,,A
+11,15, 0,0, 1 ,,A
+11,16, 0,0, 1 ,,A
+11,17, 0,0, 1 ,,A
+11,18, 0,0, 1 ,,A
+11,19, 0,0, 1 ,,A
+11,20, 0,0, 1 ,,A
+11,21, 0,0, 1 ,,A
+11,22, 0,0, 1 ,,A
+11,23, 0,0, 1 ,,A
+11,24, 0,0, 1 ,,A
+11,25, 0,0, 1 ,,A
+11,26, 0,0, 1 ,,A
+11,26, 100000,0, 60 ,,A
+11,15, 0,0, 1 ,,A
+11,16, 0,0, 1 ,,A
+11,17, 0,0, 1 ,,A
+11,18, 0,0, 1 ,,A
+11,19, 0,0, 1 ,,A
+11,20, 0,0, 1 ,,A
+11,21, 0,0, 1 ,,A
+11,22, 0,0, 1 ,,A
+11,23, 0,0, 1 ,,A
+11,24, 0,0, 1 ,,A
+11,25, 0,0, 1 ,,A
+11,26, 0,0, 1 ,,A
+11,26, 100000,0, 70 ,,A
+[Begin Action 200]
+12,0, 0,0, 1
+12,1, 0,0, 1
+12,2, 0,0, 1
+12,3, 0,0, 1
+12,4, 0,0, 1
+12,5, 0,0, 1
+12,6, 0,0, 1
+12,7, 0,0, 1
+12,8, 0,0, 1
+12,9, 0,0, 1
+12,10, 0,0, 1
+12,11, 0,0, 1
+12,12, 0,0, 1
+12,13, 0,0, 1
+12,14, 0,0, 1
+12,15, 0,0, 1
+12,16, 0,0, 1
+12,17, 0,0, 1
+12,18, 0,0, 1
+12,19, 0,0, 1
+12,20, 0,0, 1
+12,21, 0,0, 1
+12,22, 0,0, 1
+12,23, 0,0, 1
+12,24, 0,0, 1

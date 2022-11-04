@@ -1,0 +1,55 @@
+;EDMOND HONDA from Super Street Fighter II Turbo/X by OMEGAPSYCHO
+;Copyright CAPCOM. 2013
+; E-mail: OMEGAPSYCHO@hotmail.com
+;versión 1.0 (100%) 
+
+;------------------------------
+;[Player Information]
+;------------------------------
+[Info]
+Name         ="E.HONDA"
+DisplayName  ="E.HONDA"
+VersionDate  = 10,05,2013
+MugenVersion =1.1
+Author       ="OMEGAPSYCHO"
+Pal.Defaults = 4,5,6,1,2,3,7,8,9,10,11,12
+;------------------------------
+;[Common Files] 
+;------------------------------
+[Files]
+cmd	= CODE/commandHonda.cmd	;Command set
+cns	= CODE/constantHonda.cns	;Constants
+stcommon = CODE/commonHonda.cns	;Common states
+sprite	= CODE/HONDA.sff	;Sprite
+anim	= CODE/animationHonda.air	;Animation
+sound	= CODE/HONDA.snd    	;Sound
+
+;------------------------------
+;[States] 
+;------------------------------
+st       = CODE/commonHonda.cns	;Common
+st2     = CODE/statesHonda.cns	;States
+st3     = CODE/-2Honda.cns
+st4     = CODE/MOVESHonda.cns
+;------------------------------
+pal1 = act/HONDA_LK.act
+pal2 = act/HONDA_MK.act
+pal3 = act/HONDA_SK.act
+pal4 = act/HONDA_ORIGINAL.act  ;<<<< HONDA_LP.act ;Original from SSFIIX/Turbo
+pal5 = act/HONDA_MP.act
+Pal6 = act/HONDA_SP.act
+Pal7 = act/HONDA_START.act
+Pal8 = act/HONDA_HOLD.act
+Pal9 = act/HONDA_ALTERNATE.act
+Pal10 =act/HONDA_LP.act
+Pal11 = act/HONDA_EXTRA_1.act
+Pal12 = act/HONDA_EXTRA_3.act
+
+;Extra Colors
+;Pal* = act/HONDA_EXTRA_2.act
+;Pal* = act/HONDA_EXTRA_4.act
+;Pal* = act/HONDA_EXTRA_5.act
+;------------------------------
+[Arcade]
+Ending.StoryBoard =char/ending.def
+intro.storyboard=

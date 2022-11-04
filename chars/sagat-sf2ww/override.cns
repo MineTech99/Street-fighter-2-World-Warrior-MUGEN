@@ -1,0 +1,590 @@
+;---------------------------------------------------------------------------
+; Override common states (use same number to override) :
+;---------------------------------------------------------------------------
+
+;---------------------------------------------------------------------------
+; States that are always executed (use statedef -2)
+;---------------------------------------------------------------------------
+[Statedef -2]
+
+;====================
+;--------------------
+; SNES Mode Style
+;--------------------
+[State -2, VarSet]
+type = VarSet
+trigger1 = Name = "SNES-Sagat"
+ignorehitpause = 1
+var(50) = 10
+
+[State -2, VarSet]
+type = VarSet
+trigger1 = Name != "SNES-Sagat"
+ignorehitpause = 1
+var(50) = 0
+;====================
+
+;----- No Juggle Check -----
+[State -2, AssertSpecial]
+type = AssertSpecial
+triggerall = NumEnemy > 0
+trigger1 = EnemyNear, StateType != A
+trigger2 = EnemyNear, Pos Y = 0
+ignorehitpause = 1
+flag = NoJuggleCheck
+;--------------------------
+
+;----- Win/Lose Count -----
+[State -2, VarSet]
+type = VarSet
+trigger1 = RoundState <= 2
+trigger2 = RoundsExisted <= 0
+ignorehitpause = 1
+v = 40
+value = 0
+
+[State -2, VarSet]
+type = VarSet
+trigger1 = RoundsExisted <= 0
+ignorehitpause = 1
+v = 41
+value = 0
+
+[State -2, VarSet]
+type = VarSet
+trigger1 = RoundsExisted <= 0
+ignorehitpause = 1
+v = 42
+value = 0
+
+[State -2, VarAdd]
+type = VarAdd
+trigger1 = RoundState > 3
+ignorehitpause = 1
+v = 40
+value = 1
+
+[State -2, Win]
+type = VarAdd
+triggerall = Win
+trigger1 = RoundState > 3
+trigger1 = Var(40) = 1
+ignorehitpause = 1
+v = 41
+value = 1
+
+[State -2, Lose]
+type = VarAdd
+triggerall = Lose
+trigger1 = RoundState > 3
+trigger1 = Var(40) = 1
+ignorehitpause = 1
+v = 42
+value = 1
+;--------------------------
+
+;----- Attack Sound -----
+[State -2, Punch-Hit]
+type = PlaySnd
+triggerall = MoveHit
+triggerall = MoveType = H
+triggerall = P2MoveType = H
+trigger1 = PrevStateNo >= 200
+trigger1 = PrevStateNo < 230
+trigger2 = PrevStateNo >= 400
+trigger2 = PrevStateNo < 430
+trigger3 = PrevStateNo >= 600
+trigger3 = PrevStateNo < 630
+trigger4 = PrevStateNo >= 1100
+trigger4 = PrevStateNo < 2000
+trigger5 = PrevStateNo >= 2100
+trigger5 = PrevStateNo < 2200
+ignorehitpause = 1
+value = 2, 3 + Var(50)
+channel = 2
+
+[State -2, Kick-Hit]
+type = PlaySnd
+triggerall = MoveHit
+triggerall = MoveType = H
+triggerall = P2MoveType = H
+trigger1 = PrevStateNo >= 230
+trigger1 = PrevStateNo < 260
+trigger2 = PrevStateNo >= 430
+trigger2 = PrevStateNo < 460
+trigger3 = PrevStateNo >= 630
+trigger3 = PrevStateNo < 660
+trigger4 = PrevStateNo >= 2000
+trigger4 = PrevStateNo < 2100
+ignorehitpause = 1
+value = 2, 6 + Var(50)
+channel = 2
+
+[State -2, Guard]
+type = PlaySnd
+triggerall = MoveGuarded
+triggerall = MoveType = H
+triggerall = P2MoveType = H
+trigger1 = PrevStateNo >= 200
+trigger1 = PrevStateNo < 4000
+ignorehitpause = 1
+value = 2, 0 + Var(50)
+channel = 3
+;------------------------
+
+;----- Fireball Hit Sounds -----
+[State -2, Hit]
+type = PlaySnd
+trigger1 = Var(10) = 1
+ignorehitpause = 1
+value = 2, 3 + Var(50)
+channel = 2
+
+[State -2, Guard]
+type = PlaySnd
+trigger1 = Var(11) = 1
+ignorehitpause = 1
+value = 2, 0 + Var(50)
+channel = 3
+
+[State -2, VarAdd]
+type = VarAdd
+trigger1 = Var(10) > 0
+ignorehitpause = 1
+v = 10
+value = 1
+
+[State -2, VarAdd]
+type = VarAdd
+trigger1 = Var(11) > 0
+ignorehitpause = 1
+v = 11
+value = 1
+
+[State -2, VarSet]
+type = VarSet
+trigger1 = Var(10) >= 2
+ignorehitpause = 1
+v = 10
+value = 0
+
+[State -2, VarSet]
+type = VarSet
+trigger1 = Var(11) >= 2
+ignorehitpause = 1
+v = 11
+value = 0
+;------------------------------
+
+;===== Dizzy Counter =====
+;----- Start Max -----
+[State -2, VarSet]
+type = VarSet
+trigger1 = Var(8) <= 0
+trigger2 = RoundState < 2
+ignorhitpause = 1
+v = 8
+value = 20
+;-------------------------
+
+;----- Damage Hits -----
+[State -2, Light Hit]
+type = VarAdd
+triggerall = Alive
+triggerall = Time <= 0
+triggerall = NumEnemy > 0
+triggerall = MoveType = H
+triggerall = StateType != L
+triggerall = StateNo >= 5000
+triggerall = GetHitVar(animtype) <= 0
+trigger1 = EnemyNear, HitDefAttr = SCA, NA, NT, NP
+trigger2 = EnemyNear, HitDefAttr = SCA, SA, ST, SP
+trigger3 = GetHitVar(hitcount) < 5
+ignorhitpause = 1
+v = 7
+value = 2
+
+[State -2, Medium Hit]
+type = VarAdd
+triggerall = Alive
+triggerall = Time <= 0
+triggerall = NumEnemy > 0
+triggerall = MoveType = H
+triggerall = StateType != L
+triggerall = StateNo >= 5000
+triggerall = GetHitVar(animtype) = 1
+trigger1 = EnemyNear, HitDefAttr = SCA, NA, NT, NP
+trigger2 = EnemyNear, HitDefAttr = SCA, SA, ST, SP
+trigger3 = GetHitVar(hitcount) < 5
+ignorhitpause = 1
+v = 7
+value = 4
+
+[State -2, Heavy Hit]
+type = VarAdd
+triggerall = Alive
+triggerall = Time <= 0
+triggerall = NumEnemy > 0
+triggerall = MoveType = H
+triggerall = StateType != L
+triggerall = StateNo >= 5000
+triggerall = GetHitVar(animtype) = 2
+trigger1 = EnemyNear, HitDefAttr = SCA, NA, NT, NP
+trigger2 = EnemyNear, HitDefAttr = SCA, SA, ST, SP
+trigger3 = GetHitVar(hitcount) < 5
+ignorhitpause = 1
+v = 7
+value = 6
+
+[State -2, Falling Hit]
+type = VarAdd
+triggerall = Alive
+triggerall = Time <= 0
+triggerall = NumEnemy > 0
+triggerall = MoveType = H
+triggerall = StateType != L
+triggerall = StateNo >= 5000
+triggerall = GetHitVar(animtype) >= 3
+trigger1 = EnemyNear, HitDefAttr = SCA, NA, NT, NP
+trigger2 = EnemyNear, HitDefAttr = SCA, SA, ST, SP
+trigger3 = GetHitVar(hitcount) < 5
+ignorhitpause = 1
+v = 7
+value = 8
+
+[State -2, Thrown]
+type = VarAdd
+triggerall = Alive
+triggerall = Time <= 0
+triggerall = NumEnemy > 0
+triggerall = MoveType = H
+triggerall = StateType != L
+trigger1 = StateNo >= 160
+trigger1 = StateNo < 5000
+trigger1 = Anim < 800
+ignorhitpause = 1
+v = 7
+value = 5
+;-------------------------
+
+;----- Decrease Over Time -----
+[State -2, VarAdd]
+type = VarAdd
+triggerall = Alive
+triggerall = Var(7) > 0
+trigger1 = MoveType != H
+trigger1 = TimeMod = 50,25
+trigger1 = Time > 0
+v = 7
+value = -1
+;-------------------------
+
+;----- Reset Variables -----
+[State -2, VarSet]
+type = VarSet
+trigger1 = !Alive
+trigger1 = MoveType = H
+trigger2 = MoveType != H
+trigger2 = Var(7) >= Var(8)
+trigger3 = Var(7) < 0
+trigger4 = StateNo >= 5300
+trigger4 = StateNo < 5500
+trigger5 = Time <= 0
+trigger5 = MoveType = H
+trigger5 = NumEnemy > 0
+trigger5 = EnemyNear, HitDefAttr = SCA, HA, HT, HP
+trigger6 = Time > 0
+trigger6 = MoveType != H
+trigger6 = TimeMod = 200, 100
+trigger7 = StateNo >= 150
+trigger7 = StateNo < 160
+trigger7 = Var(7) > 0
+ignorehitpause = 1
+v = 7
+value = 0
+
+[State -2, VarSet]
+type = VarSet
+trigger1 = !Alive
+trigger1 = MoveType = H
+trigger2 = StateNo >= 5300
+trigger2 = StateNo < 5400
+trigger3 = MoveType != H
+trigger4 = Var(9) < 0
+v = 9
+value = 0
+;-------------------------
+
+;----- Actually Dizzy -----
+[State -2, VarSet]
+type = VarSet
+trigger1 = Var(7) >= Var(8)
+v = 7
+value = Var(8)
+
+[State -2, VarSet]
+type = VarSet
+triggerall = Alive
+trigger1 = Var(7) >= Var(8)
+v = 9
+value = 1
+
+[State -2, CtrlSet]
+type = CtrlSet
+trigger1 = Var(9) > 0
+trigger1 = StateNo >= 5000
+trigger1 = StateNo < 5300
+ignorehitpause = 1
+value = 0
+
+[State -2, NotHitBy]
+type = NotHitBy
+trigger1 = Var(9) > 0
+trigger1 = StateNo >= 5000
+trigger1 = StateNo <= 5110
+ignorehitpause = 1
+value = SCA
+time = 1
+
+[State -2, SelfState]
+type = SelfState
+triggerall = Alive
+triggerall = StateNo != 5400
+triggerall = !HitShakeOver
+triggerall = StateNo >= 5000
+triggerall = StateNo < 5080
+trigger1 = Var(9) > 0
+ignorehitpause = 1
+value = 5400
+ctrl = 0
+;-------------------------
+
+;----- Dizzy Stars/Birds -----
+[State -2, Dizzy]
+type = Helper
+triggerall = Alive
+triggerall = Var(9) > 0
+triggerall = NumHelper(6300) <= 0
+trigger1 = StateNo >= 5110
+trigger1 = StateNo <= 5300
+trigger1 = StateTime >= 10
+trigger2 = StateNo >= 5120
+trigger2 = StateNo < 5300
+helpertype = normal
+size.ground.back = 0
+size.ground.front = 0
+size.air.back = 0
+size.air.front = 0
+name = "Dizzy"
+id = 6300
+pos = 0, 0
+postype = P1
+stateno = 6300
+keyctrl = 1
+ownpal = 1
+;-------------------------
+;=========================
+
+[State -2, State]
+type = ChangeState
+triggerall = Ctrl
+triggerall = Pos Y != 0
+trigger1 = StateType != A
+trigger1 = MoveType = I
+value = 50
+
+[State -2, NoGuard]
+type = AssertSpecial
+trigger1 = 1
+ignorehitpause = 1
+flag = NoAirGuard
+
+;--------------------
+; KO Scream
+[State -2, VarSet]
+type = VarSet
+trigger1 = Alive
+trigger1 = Life > 0
+ignorehitpause = 1
+v = 55
+value = -1
+
+[State -2, VarAdd]
+type = VarAdd
+trigger1 = Alive <= 0
+trigger1 = Life <= 0
+trigger1 = Var(55) <= 0
+ignorehitpause = 1
+v = 55
+value = 1
+
+[State -2, VarSet]
+type = VarSet
+trigger1 = Var(55) > 0
+ignorehitpause = 1
+v = 55
+value = 1
+
+[State -2, PlaySnd]
+Type = PlaySnd
+triggerall = Alive <= 0
+triggerall = Life <= 0
+trigger1 = Var(55) = 0
+value = 11, 1 + Var(50)
+;channel = 0
+;--------------------
+
+;----- Round Over -----
+[State -2, VarAdd]
+type = VarAdd
+triggerall = Alive
+triggerall = MoveType = I
+triggerall = RoundState = 3
+trigger1 = StateNo <= 0
+ignorehitpause = 1
+v = 5
+value = 1
+
+[State -2, CtrlSet]
+type = CtrlSet
+triggerall = Alive
+triggerall = MoveType = I
+triggerall = RoundState = 3
+trigger1 = Var(5) < 50
+ignorehitpause = 1
+value = 0
+
+[State -2, PosSet]
+type = PosSet
+triggerall = Alive
+triggerall = MoveType = I
+triggerall = RoundState = 3
+trigger1 = Var(5) < 50
+trigger1 = Pos Y >= 0
+y = 0
+
+[State -2, State]
+type = ChangeState
+triggerall = Alive
+triggerall = MoveType = I
+triggerall = RoundState = 3
+trigger1 = Var(5) < 50
+trigger1 = Pos Y >= 0
+value = 0
+
+[State -3, CtrlSet]
+type = CtrlSet
+triggerall = Alive
+triggerall = MoveType = I
+triggerall = RoundState = 3
+trigger1 = Var(5) > 50
+ignorehitpause = 1
+value = 1
+;-------------------------
+
+;----- Display -----
+[State -2, Variables]
+type = DisplayToClipboard
+trigger1 = 1
+text = "Hits: %d/%d \t Dizzy Falling: %d \nWin: %d \t Lose: %d"
+params = Var(7), Var(8), Var(9), Var(41), Var(42)
+;--------------------
+
+[State -2, Width]
+type = Width
+triggerall = StateType = S
+trigger1 = StateNo >= 120 && StateNo <= 160
+trigger2 = Anim >= 120 && Anim <= 160
+value = -10, 0
+
+;---------------------------------------------------------------------------
+; States that are executed when in self's state file (use statedef -3)
+;---------------------------------------------------------------------------
+[Statedef -3]
+
+;----- Opponent Check -----
+[State -3, VarSet]
+type = VarSet
+triggerall = Win
+triggerall = Alive
+triggerall = MatchOver
+triggerall = NumTarget > 0
+triggerall = RoundState > 2
+triggerall = Var(41) >= Var(42) - 1
+trigger1 = Target, AnimExist(9001) || Target, AnimExist(9005)
+ignorehitpause = 1
+v = 6
+value = 1
+
+[State -3, State]
+type = TargetState
+triggerall = Var(6) > 0
+triggerall = NumTarget > 0
+trigger1 = Target, StateType = L
+trigger1 = Target, StateNo >= 5110
+trigger1 = Target, StateNo < 5120
+ignorehitpause = 1
+value = 9111
+
+[State -3, VarSet]
+type = VarSet
+trigger1 = RoundState <= 2
+;trigger2 = RoundsExisted <= 0
+ignorehitpause = 1
+v = 15
+value = 0
+
+[State -3, VarSet]
+type = VarSet
+triggerall = Win
+triggerall = Alive
+triggerall = MatchOver
+triggerall = RoundState > 2
+triggerall = Var(41) >= Var(42) - 1
+trigger1 = NumTarget > 0
+trigger1 = Target, AnimExist(9001) || Target, AnimExist(9005)
+trigger1 = Target, StateNo = 9111
+trigger2 = NumEnemy > 0
+trigger2 = EnemyNear, AnimExist(9001) || EnemyNear, AnimExist(9005)
+trigger2 = EnemyNear, StateNo = 9111
+ignorehitpause = 1
+v = 15
+value = 1234567890
+
+[State -3, Drop]
+type = TargetDrop
+triggerall = Var(6) > 0
+triggerall = NumTarget > 0
+trigger1 = Target, StateNo = 9111
+ignorehitpause = 1
+
+[State -3, Helper]
+type = Helper
+triggerall = Win
+triggerall = Alive
+triggerall = MatchOver
+triggerall = NumEnemy > 0
+triggerall = NumTarget <= 0
+triggerall = RoundState > 2
+triggerall = Var(41) >= Var(42) - 1
+trigger1 = EnemyNear, AnimExist(9001) || EnemyNear, AnimExist(9005)
+trigger1 = NumHelper(9100) <= 0
+helpertype = normal
+name = "Target Check"
+id = 9100
+pos = 0, 0
+stateno = 9100
+keyctrl = 0
+;-----------------------------
+
+[State -3, Helper]
+type = Helper
+trigger1 = NumHelper(6666) <= 0
+helpertype = normal
+name = "AI Control"
+id = 6666
+pos = 1000, 1000
+stateno = 6666
+keyctrl = 1
+
+;---------------------------------------------------------------------------

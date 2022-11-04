@@ -1,0 +1,233 @@
+ Balrog - Street Fighter 2 - Por Lord_S - Nov/Dez. 2004         
+
+ ESTE CHAR FOI OU DEVERIA TER SIDO PUXADO DA CYBERBIT MUGEN
+ ====================================================================
+ CyberBit Mugen Page : www.veteranos.xpg.com.br/cyberbit/
+ ====================================================================
+     __           __      ____ __      __     _____           
+    / / ___ ___ _/ /\    / __//_/__   /_/____/_  _/__ ___    
+   / /_/_ //-_//_ / /   /__ // //  \ / //_ -´ / //-_//_ /\  
+  /___/__//__|/__/ /   /___//_//_/_//_//___/ /_//__\/__/ / 
+  \______________\/    \_______________________________\/ 
+
+ ====================================================================
+ Meu E-mail: Cyberlord_s@hotmail.com
+ ====================================================================
+
+ Enfim, um personagem do Street Fighter 2. Pq o Balrog? Pq o nome japones?
+ O personagem q mais jogava no street é a Chun li, porém ela é muito difundida
+ e aparece em todos os jogos novos da Capcom. Balrog é o personagem q considero
+ mais original, e ele não tem o mesmo destaque da chinesinha. Estou me referindo
+ com o nome da versão em japonês pq é o nome de batismo do personagem do jogo 
+ original, é o q devemos usar, apesar de estar acostumado a chama-lo de Vega.
+ Este personagem foi convertido com uma perfeição que nunca tinha tentado antes,
+ eu não acho interessante converter até a velocidade da animação, prefiro fazer
+ na raça, no melhor estilo "Se tá massa blz, se não, blz tmbm". Mas por se tratar
+ do meu trigésimo char, e do jogo kick&punch mais importante da história, este 
+ merecia o empenho. Ele é um mix da versão champion edition + super, apenas pq na 
+ versão super ele ganhou mais golpes, q se foda se é cps2 ou 1. Por isso que a 
+ bigportaid está na forma clássica. A velocidade é a normal, não gosto da turbo. 
+ Sempre quis converter um char do SF2 mas queria fazer qnd tivesse conhecimento 
+ o suficiente pra ficar perfeito. Mais um obstáculo vencido por um cara q se isolou
+ do resto e aprendeu tudo sozinho.
+
+ ------------------------------------------------------------------------------
+ Golpes, especiais e outros
+ ------------------------------------------------------------------------------
+
+     U  	A =SocoFraco/LightPunch		X =ChuteFraco/LightKick
+     ^  	B =SocoMedio/MediumPunch	Y =ChuteMedio/MediumKick
+ B <-|-> F	C =SocoForte/StrongPunch	Z =ChuteForte/StrongKick
+     v		
+     D 		U =Cima/Up   F =Frente/Foward    B =Tras/Back   D =Baixo/Down
+
+ ------------------------------------------------------------------------------
+ Especialis/Specials 
+ ------------------------------------------------------------------------------
+
+ TumblingClaw = B (1/2 seg) F + soco/punch
+
+ ClawThrust*  = D (1/2seg) U + soco/punch
+
+ FowardFlip   = DB (1/2seg) F + chute/kick
+
+ #Wall Dive* = D (1/2seg) U + chute/kick
+ #1- Screaming Eagle = Soco/Puch  (após o Wall Dive / after Wall Dive)
+ #2- Izuna Drop  = F + Soco/punch (após o Wall Dive / after Wall Dive)
+ Para efeutar o Izuna Drop é necessário estar bem próximo do oponente
+ To Izuna Drop you need be very close of opponent
+   
+ * Pode ser direcionado usando a diagonal cima-frente
+ * Can directioned using Up-Foward diagonal
+
+ ------------------------------------------------------------------------------
+ Outros/Others 
+ ------------------------------------------------------------------------------
+
+ Backflip = B,B (Hop) 
+
+ Normal/Air Throw = F + soco medio ou forte/medium or strong punch
+
+ ------------------------------------------------------------------------------
+ Hipers 
+ ------------------------------------------------------------------------------
+ 
+ Triple Foward Flip = B,F,B,F + Chute / Kick           (Lv.1) 
+
+ Hiper Slash 	    = B,F,B,F + Soco / Punch           (Lv.2) 
+
+ Rolling Izuna Backdrop* = DB,DF,DB, U + Chute/kick    (Lv.3)
+ 
+ ------------------------------------------------------------------------------
+ Dicas e outros / Tips and others 
+ ------------------------------------------------------------------------------
+
+ O tempo pra segurar os comandos é muito pequeno, bem menor q o original.
+
+ Vc pode ao invés de segurar B (tras) segurar DB (diagonal-trás) para não
+ se afastar do oponente (em qualquer especial).
+
+ O Foward Flip é imune a magias (projéteis) simples.
+
+ O Izuna drop (throw) tmbm pode ser acionado segurando D ou DB + soco
+
+ O hiper level 3 é indefensável, mas só acerta se o oponente estiver no chão.
+
+ ------------------------------------------------------------------------------
+ Combos
+ ------------------------------------------------------------------------------
+
+ Main Combo 1 - Em pé-Stand : A,Y,C
+ Combo 2 : Perto/Close : X,B,Z
+
+ Combo 3 : Abaixado/Crouch : A ou/or X, Foward Flip
+
+ ------------------------------------------------------------------------------
+ Truques - Cheats
+ ------------------------------------------------------------------------------
+
+ Eu fiz uma brincadeira como nos emuladores, e tornei possível a aplicação de
+ cheats para o Balrog. Abra o arquivo b_cheats.cns no bloco de notas mesmo, e
+ veja as intruções para alterar, depois salve e pronto. Entre as cheats estão:
+ Invencibilidade, super força, super resitencia, ghost mode etc...
+
+ For joke, open b_cheats.cns and read how to enable some cheats (invencibility,
+ super power, ghost mode, full power bar etc...) 
+
+ Agradecimentos-----------------------------------------------------------
+
+ A Elecbyte pelo Mugen.
+ A Capcom por iniciar esta nova era nos arcades e nos jogos
+ A equipe que desenvolveu SF2, vc ve q eram simples mas muito dedicados
+ Aos amigos ShadowTak, Romulo, MrPancadaria, JaguarHX, Ixnay e demais q 
+ curtem meus chars
+
+ Hospedagem----------------------------------------------------------------
+
+ Não permito a hospedagem, pois sempre desrespeitam, apagam o Read-me,
+ alteram e não dão os créditos de quem fez. Eu fiz minha hp justamente pra
+ hospedar meus chars. Respeitem os chars e seus criadores, assim o mugen 
+ sempre terá novidades. Não obrigo ninguém a frequentar o meu site, muito
+ menos jogo na cara dos outros meus trabalhos. Cyberbit Mugen é um canto
+ pequeno e alternativo onde somente amigos e aqueles q jogam por diversão 
+ e respeitam o mugen são bem vindos.
+
+ Lord Sinistro - O Iconoclasta --------------------------------------------
+
+ Posso não concordar com o que voçe diz, por isso não vou defender o direito
+ de voce dizer bobagem, se quiser, o faça para os que tenham o mesmo nível de
+ raciocínio, pois da mesma maneira não tens o direito de usar meu ouvido como
+ pinico, ou abusar de minha paciência e tolerâcia!
+
+ O q é o carimbo de chulezinho? (Reload)------------------------------------
+
+ Cyber Bit mugen é a primeira hp a receber o carimbo de chulezinho, que nada mais
+ é do que um pé vermelho no canto superior direito. Num dia enquanto viajava, 
+ lembrei q qnd estudava nas primeiras séries eu era muito relachado, nao fazia
+ a liçao de casa direito, meu caderno era todo amassado cheio de orelhas de  burro,
+ e a professora vivia carimbando-o com o tal do chulezinho, para q eu tomasse uma
+ atitude. E ela vivia me chamando de porquinho, e mandava bilhetes para meus pais.
+ Na verdade eu gostava de receber carimbos de chulezinho, pq quem recebia
+ carimbos de estrelinhas eram pessoas vendidas pela sociedade. Entao agora vi 
+ q minha hp nada mais é do que uma versão digitalizada do meu caderno escolar, 
+ pois ela é suja, contém palavroes, é mal feita e nao tem frescuras. Por isso me 
+ orgulho de auto carimbá-la com o chulezinho, Chulezinho RULES!
+ Ah... e o problema da professora ser tao arrogande com crianças que mal sabiam 
+ escrever ainda era simplesmente falta de sexo HAHAHAHAHAHAHAHA....
+ E eu odeio estrelas!!!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Furabucho:--------------------------------------------------------------------------
+ Estabelecimento comercial de bebidas alcólicas, frequentado
+ preferivelmente por pessoas de baixo nível cultural, onde discóridas
+ são uma constante, principalmente se houver jogatina (caxeta, totó, sinuca, bilharito)
+ e som ambiente de baixo calão. Alta incidência de escoriações e perfurações decorrente de
+ artefatos cortantes como facas, garrafa quebrada, foice entre outros.
+ Facilmente identificado pelo rolo com sacolas plásticas na porta de entrada (igualmente
+ encontradas no supermercado na seção de verduras) onde os usuários guardam, na saída,
+ suas víceras e demais partes dos órgãos internos da região inferior do tronco.
+ Ébrios, meretrizes, assalariados e mendicantes são os frequentadores mais assíduos.
+ Grande rotatividade de intorpecentes não liberados, sujeira e degradação humana, é
+ um ambiente muito comum tanto nos grandes centros urbanos como nas regiões rurais do 
+ interior dos estados. Responsável por grande porcentagem da criminalização e 
+ mortalidade entre adultos, atuando assim como controle biológico anti-propagação dos 
+ considerados por muitos, páreas da sociedade.

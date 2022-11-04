@@ -1,0 +1,29 @@
+; Balrog Clássico by Lord Sinistro 2004
+; Balrog SF2 pertençe a Cyberbit hp: http://www.cyberbit.hpg.com.br
+
+[Info]
+Name="Balrogsf2"
+DisplayName="Vega"
+Author="Lord Sinistro"
+VersionDate= 
+MugenVersion=11,01,2001
+pal.defaults=1,2
+ ;Run in DOS or Linux
+Pal.Defaults= 1,2,3,4,5,6
+
+[Files]
+anim=balrogsf2.air
+sprite=balrogsf2.sff
+sound=balrogsf2.snd
+cmd=balrogsf2.cmd
+cns=balrogsf2.cns
+st=balrogsf2.cns
+stcommon=common1.cns
+pal1=balrogsf2.act
+pal2=balrogsf2_br.act
+st1=balrogEx.cns
+st2=b_cheats.cns
+
+[Arcade]
+intro.storyboard  =
+ending.storyboard =ending.def

@@ -1,0 +1,90 @@
+;=============================
+;arcade mode final do cara
+;==============================
+
+[SceneDef]
+spr = balrogstory.sff
+startscene = 0         
+
+[Scene 0]
+bgm = bsf2end.mp3
+bgm.loop = 0
+fadein.time = 200       
+fadein.col = 10,10,10     
+fadeout.time = 10
+fadeout.col = 0,0,0
+clearcolor = 0,0,0
+layer0.anim = 0      
+layer0.offset = 43,15
+layer0.starttime = 0
+layer1.anim = 1      
+layer1.offset = 43,30
+layer1.starttime = 100   
+end.time = 1000
+
+[Scene 1]
+fadein.time = 50       
+fadein.col = 0,0,0     
+fadeout.time = 100
+fadeout.col = 0,0,0
+clearcolor = 0,0,0
+layer0.anim = 2
+layer0.offset = 43,15
+layer0.starttime = 0   
+layer1.anim = 3
+layer1.offset = 43,30
+layer1.starttime = 0
+layer2.anim = 4
+layer2.offset = 43,15
+layer2.starttime = 850  
+end.time = 1450
+
+[Scene 2]
+fadein.time = 100       
+fadein.col = 0,0,0     
+fadeout.time = 200
+fadeout.col = 0,0,0
+clearcolor = 0,0,0
+layer0.anim = 5
+layer0.offset = 16,10
+layer0.starttime = 0   
+layer1.anim = 6
+layer1.offset = 16,20
+layer1.starttime = 0
+end.time = 1000
+
+;tela 1
+[Begin Action 0]
+3,0, 0,0, -1
+
+;legendas
+;Nota : eu me nego a traduzir esta viadagem, porra capcom q q é isso!
+[Begin Action 1]
+4,0, 0,0, 300
+4,1, 0,0, 300
+4,2, 0,0, -1
+
+;tela 2
+[Begin Action 2]
+3,1, 0,0, -1
+
+;continua
+[Begin Action 3]
+4,3, 0,0, 350
+4,4, 0,0, 300
+4,5, 0,0, 300
+4,6, 0,0, -1
+
+;Quem é o próximo????
+[Begin Action 4]
+3,2, 0,0, 40
+3,3, 0,0, 40
+3,4, 0,0, -1
+
+;tequila com vermezinho
+[Begin Action 5]
+5,0, 0,0, -1
+
+;E o logotipo, the end!
+[Begin Action 6]
+5,1, 0,0, -1
